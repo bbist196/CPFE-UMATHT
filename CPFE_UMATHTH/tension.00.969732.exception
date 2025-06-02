@@ -1,0 +1,70 @@
+<Description>
+      ABAQUS/standard rank 0 encountered a SEGMENTATION VIOLATION referencing location (nil)
+
+</Description>
+
+<Step> 1 </Step>
+
+<Procedure> STATIC </Procedure>
+
+
+<Context>
+   ELEMENT LOOP
+</Context>
+
+<Phase>
+   Increment | Attempt | Iteration | Elgen | Elgene | Elgene_regular
+</Phase>
+
+
+<Memory>
+   <Current>            3 GB </Current>
+   <Resident>           0 GB </Resident>
+   <Physical>          16 GB </Physical>
+   <Limit>             12 GB </Limit>
+   <Accessible>        16 GB </Accessible>
+   <Available>          2 GB </Available>
+   <Allocator>            DL </Allocator>
+   <HugePages>        always </HugePages>
+</Memory>
+
+<Swap>
+       <Size>           7 GB </Size>
+       <Used>           0 GB </Used>
+       <Free>           7 GB </Free>
+</Swap>
+
+<Directories>
+  <current> /tmp/bbist_tension_969671      </current> <free>      6 GB </free>   <used>     63 GB </used> 
+    <indir> /home/bbist/Research/CPFE+UMATHTH/CPFE_UMATHTH </indir>   <free>    279 GB </free>  
+   <outdir> /home/bbist/Research/CPFE+UMATHTH/CPFE_UMATHTH </outdir>  <free>    279 GB </free> 
+   <tmpdir> /tmp/bbist_tension_969671      </tmpdir>  <free>      6 GB </free> 
+</Directories>
+
+<Installation>
+     <Version> 2024 6.24-1 </Version>
+       <Build> 2023_09_21-06.55.25 RELr426 190762 </Build>
+  <Executable> /usr/SIMULIA/EstProducts/2024/linux_a64/code/bin/standard </Executable>
+</Installation>
+
+<Callstack>
+   1) libstandardU.so            0x0000def7 ! equaltensors     ??:?
+   2) libstandardU.so            0x00010012 ! savecrystalvariablesatip ??:?
+   3) libstandardU.so            0x0000ebb8 ! drivercrystalevolve ??:?
+   4) libstandardU.so            0x0000e351 ! stresscrystal    ??:?
+   5) libstandardU.so            0x0000ca07 ! evolvematlstate  ??:?
+   6) libstandardU.so            0x0000c33a ! umat             ??:?
+   7) libABQSMAStaCore.so        0x0230e944 ! matu2_           ??:?
+   8) libABQSMAStaCore.so        0x0230bc02 ! matu1_           ??:?
+   9) libABQSMAStaCore.so        0x033bd048 ! std_matgen_general_ ??:?
+  10) libABQSMAStaCore.so        0x02e89e54 ! std_elssol_general_ ??:?
+  11) libABQSMAStaCore.so        0x02e86a8e ! std_elssol       ??:?
+  12) libABQSMAStaCore.so        0x018d1478 ! elssol           ??:?
+  13) libABQSMAStaCore.so        0x02dfc389 ! std_elgene_solid_ ??:?
+  14) libABQSMAStaCore.so        0x016f7e54 ! elgene_          ??:?
+  15) libABQSMAStaCore.so        0x02d9f0c2 ! std_elgen_thread_ ??:?
+  16) libABQSMAStaCore.so        0x0283cad4 ! std_ElpThreadTask::Run ??:?
+  17) libABQSMAAbuBasicUtils.so  0x000e3cf7 ! thr_ThreadPool::ThreadDriver ??:?
+  18) libc.so.6                  0x00089d22 ! start_thread     ??:?
+</Callstack>
+

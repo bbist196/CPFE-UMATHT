@@ -1,0 +1,168 @@
+1
+
+   Abaqus 2024                                  Date 27-May-2025   Time 14:16:17
+   For use by UNIVERSITY OF WYOMING under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine dhcp-10-132-10-107 
+                          you are authorized to run
+                          Abaqus/Standard until 14-Aug-2025
+
+                          Your site id is: 200000000026686 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      https://www.3ds.com/products-services/simulia/services-support/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                       Abaqus 2024                       * 
+                *                                                         * 
+                *       BUILD ID: 2023_09_21-06.55.25 RELr426 190762      * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release Abaqus 2024 manuals                            * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a commercial fee.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+          OneFifthMesh-periodic                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+  *Element, type=C3D10
+  *Elset, elset=ASSEMBLY_PART-1-1_MAT1_GRN1
+  *Elset, elset=ASSEMBLY_PART-1-1_SET-1
+  *Elset, elset=ASSEMBLY_DISPZ
+  *Elset, elset=ASSEMBLY_FIXEDZ
+  *Elset, elset=ASSEMBLY_SET-102
+  *material, name=MAT1_GRN1
+  *depvar
+  *usermaterial, constants=2, type=MECHANICAL
+
+ ***ERROR: THERE ARE INVALID DATA ASSOCIATED WITH THIS USER DEFINED MATERIAL 
+           DEFINITION
+ ***NOTE: DUE TO AN INPUT ERROR THE ANALYSIS PRE-PROCESSOR HAS BEEN UNABLE TO 
+          INTERPRET SOME DATA.  SUBSEQUENT ERRORS MAY BE CAUSED BY THIS OMISSION
+  *solidsection, elset=ASSEMBLY_PART-1-1_MAT1_GRN1, material=MAT1_GRN1
+  *solidsection, elset=ASSEMBLY_PART-1-1_MAT1_GRN1, material=MAT1_GRN1
+  *boundary
+  *boundary
+  *boundary
+  *boundary, amplitude=AMP-1
+  *boundary
+  *boundary
+  *boundary
+  *boundary, amplitude=AMP-1
+  *output, field, frequency=2
+  *elementoutput, directions=YES
+  *elementoutput
+  *output, field, frequency=2
+  *elementoutput, directions=YES
+  *elementoutput
+  *output, field, frequency=2
+  *elementoutput, directions=YES
+  *elementoutput
+  *Step, name=Step-1, nlgeom=NO, inc=10000, amplitude=RAMP, unsymm=NO
+  *output, field, frequency=2
+  *Step, name=Step-1, nlgeom=NO, inc=10000, amplitude=RAMP, unsymm=NO
+  *Step, name=Step-1, nlgeom=NO, inc=10000, amplitude=RAMP, unsymm=NO
+  *static
+  *boundary
+  *boundary
+  *boundary
+  *boundary, amplitude=AMP-1
+  *output, field, frequency=2
+
+ ***WARNING: DATACARDS ON THIS OPTION WILL BE IGNORED
+  *elementoutput, directions=YES
+  *elementoutput
+  *endstep
+  *Step, name=Step-1, nlgeom=NO, inc=10000, amplitude=RAMP, unsymm=NO
+  *static
+  *boundary
+  *boundary
+  *boundary
+  *boundary, amplitude=AMP-1
+  *endstep
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                     1
+          NUMBER OF NODES IS                                       10
+          NUMBER OF NODES DEFINED BY THE USER                      10
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                   30
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+
+
+          THE PROGRAM HAS DISCOVERED     1 FATAL ERRORS
+
+               ** EXECUTION IS TERMINATED **
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =     0.14    
+       SYSTEM TIME (SEC)    =     3.00E-02
+       TOTAL CPU TIME (SEC) =     0.17    
+       WALLCLOCK TIME (SEC) =            1

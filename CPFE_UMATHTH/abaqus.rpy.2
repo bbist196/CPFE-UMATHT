@@ -1,0 +1,160 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2024 replay file
+# Internal Version: 2023_09_21-06.55.25 RELr426 190762
+# Run by bbist on Wed Dec 18 16:31:29 2024
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=338.666656494141, 
+    height=207.680557250977)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/Crystal_plasticity/DirectSimulation-C3D4/tension.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/Crystal_plasticity/DirectSimulation-C3D4/tension.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       14
+#: Number of Node Sets:          17
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+odb = session.odbs['/home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/Crystal_plasticity/DirectSimulation-C3D4/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=NODAL, variable=((
+    'SDV1', INTEGRATION_POINT), ('SDV10', INTEGRATION_POINT), ('SDV2', 
+    INTEGRATION_POINT), ('SDV3', INTEGRATION_POINT), ('SDV4', 
+    INTEGRATION_POINT), ('SDV5', INTEGRATION_POINT), ('SDV6', 
+    INTEGRATION_POINT), ('SDV7', INTEGRATION_POINT), ('SDV8', 
+    INTEGRATION_POINT), ('SDV9', INTEGRATION_POINT), ), nodeLabels=((
+    'PART-1-1', ('16', )), ))
+xyp = session.XYPlot('XYPlot-1')
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+session.viewports['Viewport: 1'].setValues(displayedObject=xyp)
+session.charts['Chart-1'].legend.area.setValues(positionMethod=MANUAL, 
+    originOffset=(0.721224, 0))
+odb = session.odbs['/home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/Crystal_plasticity/DirectSimulation-C3D4/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=NODAL, variable=((
+    'SDV1', INTEGRATION_POINT), ('SDV10', INTEGRATION_POINT), ('SDV2', 
+    INTEGRATION_POINT), ('SDV3', INTEGRATION_POINT), ('SDV4', 
+    INTEGRATION_POINT), ('SDV5', INTEGRATION_POINT), ('SDV6', 
+    INTEGRATION_POINT), ('SDV7', INTEGRATION_POINT), ('SDV8', 
+    INTEGRATION_POINT), ('SDV9', INTEGRATION_POINT), ), nodeLabels=((
+    'PART-1-1', ('25', )), ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/Crystal_plasticity/DirectSimulation-C3D4/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=NODAL, variable=((
+    'SDV1', INTEGRATION_POINT), ('SDV10', INTEGRATION_POINT), ('SDV2', 
+    INTEGRATION_POINT), ('SDV3', INTEGRATION_POINT), ('SDV4', 
+    INTEGRATION_POINT), ('SDV5', INTEGRATION_POINT), ('SDV6', 
+    INTEGRATION_POINT), ('SDV7', INTEGRATION_POINT), ('SDV8', 
+    INTEGRATION_POINT), ('SDV9', INTEGRATION_POINT), ), nodeLabels=((
+    'PART-1-1', ('23', )), ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/Crystal_plasticity/DirectSimulation-C3D4/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=NODAL, variable=((
+    'SDV1', INTEGRATION_POINT), ('SDV10', INTEGRATION_POINT), ('SDV2', 
+    INTEGRATION_POINT), ('SDV3', INTEGRATION_POINT), ('SDV4', 
+    INTEGRATION_POINT), ('SDV5', INTEGRATION_POINT), ('SDV6', 
+    INTEGRATION_POINT), ('SDV7', INTEGRATION_POINT), ('SDV8', 
+    INTEGRATION_POINT), ('SDV9', INTEGRATION_POINT), ), nodeLabels=((
+    'PART-1-1', ('27', )), ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/Crystal_plasticity/DirectSimulation-C3D4/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=NODAL, variable=((
+    'SDV1', INTEGRATION_POINT), ('SDV10', INTEGRATION_POINT), ('SDV2', 
+    INTEGRATION_POINT), ('SDV3', INTEGRATION_POINT), ('SDV4', 
+    INTEGRATION_POINT), ('SDV5', INTEGRATION_POINT), ('SDV6', 
+    INTEGRATION_POINT), ('SDV7', INTEGRATION_POINT), ('SDV8', 
+    INTEGRATION_POINT), ('SDV9', INTEGRATION_POINT), ), nodeLabels=((
+    'PART-1-1', ('11', )), ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/Crystal_plasticity/DirectSimulation-C3D4/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=NODAL, variable=((
+    'SDV1', INTEGRATION_POINT), ('SDV10', INTEGRATION_POINT), ('SDV2', 
+    INTEGRATION_POINT), ('SDV3', INTEGRATION_POINT), ('SDV4', 
+    INTEGRATION_POINT), ('SDV5', INTEGRATION_POINT), ('SDV6', 
+    INTEGRATION_POINT), ('SDV7', INTEGRATION_POINT), ('SDV8', 
+    INTEGRATION_POINT), ('SDV9', INTEGRATION_POINT), ), nodeLabels=((
+    'PART-1-1', ('6', )), ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/Crystal_plasticity/DirectSimulation-C3D4/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=NODAL, variable=((
+    'SDV1', INTEGRATION_POINT), ('SDV10', INTEGRATION_POINT), ('SDV2', 
+    INTEGRATION_POINT), ('SDV3', INTEGRATION_POINT), ('SDV4', 
+    INTEGRATION_POINT), ('SDV5', INTEGRATION_POINT), ('SDV6', 
+    INTEGRATION_POINT), ('SDV7', INTEGRATION_POINT), ('SDV8', 
+    INTEGRATION_POINT), ('SDV9', INTEGRATION_POINT), ), nodeLabels=((
+    'PART-1-1', ('19', )), ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/Crystal_plasticity/DirectSimulation-C3D4/tension.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(
+    nodeLabels=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.56303, 
+    farPlane=4.74297, width=2.43758, height=1.20274, cameraPosition=(-2.44213, 
+    -1.8807, -1.44608), cameraUpVector=(0.627429, -0.64515, 0.436021), 
+    cameraTarget=(0.026803, -0.0369288, 0.526171))
+odb = session.odbs['/home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/Crystal_plasticity/DirectSimulation-C3D4/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=NODAL, variable=((
+    'SDV1', INTEGRATION_POINT), ('SDV10', INTEGRATION_POINT), ('SDV2', 
+    INTEGRATION_POINT), ('SDV3', INTEGRATION_POINT), ('SDV4', 
+    INTEGRATION_POINT), ('SDV5', INTEGRATION_POINT), ('SDV6', 
+    INTEGRATION_POINT), ('SDV7', INTEGRATION_POINT), ('SDV8', 
+    INTEGRATION_POINT), ('SDV9', INTEGRATION_POINT), ), nodeLabels=((
+    'PART-1-1', ('22', )), ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+session.viewports['Viewport: 1'].setValues(displayedObject=xyp)

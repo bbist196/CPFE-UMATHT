@@ -1,0 +1,19 @@
+<Description>
+      ABAQUS/standard rank 00 pid 3213841 received signal 6 (Aborted)
+
+</Description>
+
+<Step> 1 </Step>
+
+<Procedure> COUPLED TEMPERATURE DISPLACEMENT </Procedure>
+
+
+<Context>
+   ELEMENT LOOP
+</Context>
+
+<Phase>
+   Increment | Attempt | Iteration | Elgen | Elgene | Elgene_regular
+</Phase>
+
+

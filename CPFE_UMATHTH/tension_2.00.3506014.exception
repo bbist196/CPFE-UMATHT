@@ -1,0 +1,14 @@
+<Description>
+      ABAQUS/standard rank 00 pid 3506014 received signal 6 (Aborted)
+
+</Description>
+
+<Step> 1 </Step>
+
+<Procedure> COUPLED TEMPERATURE DISPLACEMENT </Procedure>
+
+
+<Context>
+   ELEMENT LOOP
+</Context>
+

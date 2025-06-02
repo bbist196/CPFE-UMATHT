@@ -1,0 +1,55 @@
+*heading
+: TRANSIENT HEAT TRANSFER ANALYSIS WITH USER SUBROUTINE
+*restart,write,f=100
+*node
+1, 0.0,  0.0
+11,0.0,  0.1
+12,0.01, 0.0
+22,0.01, 0.1
+*ngen,nset=nall
+1,11
+12,22
+*element,type=dc2d4
+1, 1,12,13,2
+*elgen,elset=eall
+1, 10, 1
+*solid section,elset=eall,material=mat
+*material,name=mat
+*user material, type=thermal, constants=2
+1.40, 260.0
+***conductivity
+**1.40
+***specific heat
+**260.0
+*density
+7800.0, 
+*film property,name=filmp
+10.0,  0.0
+16.0,300.0
+*amplitude,name=sink
+0.0,100.0, 3600.0,200.0
+*initial conditions,type=temperature
+nall,0.0
+*step,inc=1000
+*heattransfer,deltmx=20.0
+100.,3600.,,100.0
+*film,amp=sink
+10,f3,1.0,filmp
+*dflux
+eall,s2,0.0
+eall,s4,0.0
+1,s1,0.0
+*elprint,f=100,position=centroidal
+coord,temp,hfl
+*nodeprint,f=100
+nt11, 
+rfl, 
+*elfile,f=4,position=centroidal
+coord, 
+temp, 
+hfl, 
+*nodefile,f=4
+nt, 
+rfl, 
+*endstep
+

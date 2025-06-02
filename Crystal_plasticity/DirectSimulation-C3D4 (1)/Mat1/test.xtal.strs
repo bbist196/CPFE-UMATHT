@@ -1,0 +1,19 @@
+ INCR               CAUCHY STRESS
+                    CONSISTENT TANGENT 
+                    RSS/KAPPA 
+ (elem #     1,  qpt #  1,  grn #     1)
+
+       1   -0.1869E-01  0.1209E+00 -0.1467E+00
+                       -0.1917E-01 -0.1464E+00
+                                    0.3786E-01
+
+                   NaN         NaN         NaN         NaN         NaN         NaN
+                   NaN         NaN         NaN         NaN         NaN         NaN
+                   NaN         NaN         NaN         NaN         NaN         NaN
+                   NaN         NaN         NaN         NaN         NaN         NaN
+                   NaN         NaN         NaN         NaN         NaN         NaN
+                   NaN         NaN         NaN         NaN         NaN         NaN
+
+            0.1437E-06  0.4628E-01  0.4628E-01  0.1437E-06 -0.4628E-01 -0.4628E-01
+           -0.1437E-06 -0.4628E-01 -0.4628E-01 -0.1437E-06  0.4628E-01  0.4628E-01
+

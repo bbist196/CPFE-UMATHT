@@ -1,0 +1,30 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB tension
+Abaqus 3DEXPERIENCE R2019x
+Begin Compiling Abaqus/Standard User Subroutines
+Sat 09 Jan 2021 09:12:29 PM MST
+ Intel(R) Fortran 19.0-1588
+End Compiling Abaqus/Standard User Subroutines
+Begin Linking Abaqus/Standard User Subroutines
+GNU ld version 2.27-41.base.el7_7.2
+End Linking Abaqus/Standard User Subroutines
+Sat 09 Jan 2021 09:12:34 PM MST
+Begin Analysis Input File Processor
+Sat 09 Jan 2021 09:12:34 PM MST
+Run pre
+Sat 09 Jan 2021 09:12:35 PM MST
+End Analysis Input File Processor
+Begin Abaqus/Standard Analysis
+Sat 09 Jan 2021 09:12:35 PM MST
+Run standard
+        Start Analysis of job tension: 21:12:36 on  9^th
+          End Analysis of job tension: 21:24:31 on  9^th
+              Total walltime:      0 hours    11 minutes    54.97742 seconds.
+Sat 09 Jan 2021 09:24:31 PM MST
+End Abaqus/Standard Analysis
+Begin Convert MFS to SFS
+Sat 09 Jan 2021 09:24:31 PM MST
+Run SMASimUtility
+Sat 09 Jan 2021 09:24:31 PM MST
+End Convert MFS to SFS
+Abaqus JOB tension COMPLETED

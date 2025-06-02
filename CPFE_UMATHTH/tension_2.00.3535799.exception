@@ -1,0 +1,70 @@
+<Description>
+      ABAQUS/standard rank 0 encountered a SEGMENTATION VIOLATION referencing location 0x10
+
+</Description>
+
+<Step> 1 </Step>
+
+<Procedure> COUPLED TEMPERATURE DISPLACEMENT </Procedure>
+
+
+<Context>
+   ELEMENT LOOP
+</Context>
+
+<Phase>
+   Increment | Attempt | Iteration | Elgen | Elgene | Elgene_regular
+</Phase>
+
+
+<Memory>
+   <Current>            3 GB </Current>
+   <Resident>           0 GB </Resident>
+   <Physical>          16 GB </Physical>
+   <Limit>             12 GB </Limit>
+   <Accessible>        16 GB </Accessible>
+   <Available>          0 GB </Available>
+   <Allocator>            DL </Allocator>
+   <HugePages>        always </HugePages>
+</Memory>
+
+<Swap>
+       <Size>           7 GB </Size>
+       <Used>           2 GB </Used>
+       <Free>           5 GB </Free>
+</Swap>
+
+<Directories>
+  <current> /tmp/bbist_tension_2_3535770   </current> <free>      5 GB </free>   <used>     64 GB </used> 
+    <indir> /home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/CPFE_UMATHTH </indir>   <free>    266 GB </free>  
+   <outdir> /home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/CPFE_UMATHTH </outdir>  <free>    266 GB </free> 
+   <tmpdir> /tmp/bbist_tension_2_3535770   </tmpdir>  <free>      5 GB </free> 
+</Directories>
+
+<Installation>
+     <Version> 2024 6.24-1 </Version>
+       <Build> 2023_09_21-06.55.25 RELr426 190762 </Build>
+  <Executable> /usr/SIMULIA/EstProducts/2024/linux_a64/code/bin/standard </Executable>
+</Installation>
+
+<Callstack>
+   1) libifcoremt.so.5           0x0005f03f ! for__interp_fmt  ??:?
+   2) libifcoremt.so.5           0x000b0b48 ! for_write_seq_fmt_xmit ??:?
+   3) libifcoremt.so.5           0x000af974 ! for_write_seq_fmt ??:?
+   4) libstandardU.so            0x0000fee1 ! writemessage     ??:?
+   5) libstandardU.so            0x00017a3f ! stressviscoplastic ??:?
+   6) libstandardU.so            0x00017621 ! stresssolveviscoplastic ??:?
+   7) libstandardU.so            0x00013d7e ! integratecrystaleqns ??:?
+   8) libstandardU.so            0x00012eec ! monitorcrystalintegration ??:?
+   9) libstandardU.so            0x0000f897 ! drivercrystalevolve ??:?
+  10) libstandardU.so            0x0000f291 ! stresscrystal    ??:?
+  11) libstandardU.so            0x0000d947 ! evolvematlstate  ??:?
+  12) libstandardU.so            0x0000d076 ! umat             ??:?
+  13) libABQSMAStaCore.so        0x0230e944 ! matu2_           ??:?
+  14) libABQSMAStaCore.so        0x0230bc02 ! matu1_           ??:?
+  15) libABQSMAStaCore.so        0x033bd048 ! std_matgen_general_ ??:?
+  16) libABQSMAStaCore.so        0x02e89e54 ! std_elssol_general_ ??:?
+  17) libABQSMAStaCore.so        0x02e86a8e ! std_elssol       ??:?
+  18) libABQSMAStaCore.so        0x018d1478 ! elssol           ??:?
+</Callstack>
+

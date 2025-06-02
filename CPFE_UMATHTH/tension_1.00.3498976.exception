@@ -1,0 +1,49 @@
+<Description>
+      ABAQUS/standard rank 0 encountered a SEGMENTATION VIOLATION referencing location (nil)
+
+</Description>
+
+<Step> 1 </Step>
+
+<Procedure> COUPLED TEMPERATURE DISPLACEMENT </Procedure>
+
+
+<Context>
+   ELEMENT LOOP
+</Context>
+
+<Phase>
+   Increment | Attempt | Iteration | Elgen | Elgene | Elgene_regular
+</Phase>
+
+
+<Memory>
+   <Current>            3 GB </Current>
+   <Resident>           0 GB </Resident>
+   <Physical>          16 GB </Physical>
+   <Limit>             12 GB </Limit>
+   <Accessible>        16 GB </Accessible>
+   <Available>          0 GB </Available>
+   <Allocator>            DL </Allocator>
+   <HugePages>        always </HugePages>
+</Memory>
+
+<Swap>
+       <Size>           7 GB </Size>
+       <Used>           1 GB </Used>
+       <Free>           5 GB </Free>
+</Swap>
+
+<Directories>
+  <current> /tmp/bbist_tension_1_3498933   </current> <free>      6 GB </free>   <used>     63 GB </used> 
+    <indir> /home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/CPFE_UMATHTH </indir>   <free>    266 GB </free>  
+   <outdir> /home/bbist/Research/HE_RESEARCH/CPFE+UMATHTH/CPFE_UMATHTH </outdir>  <free>    266 GB </free> 
+   <tmpdir> /tmp/bbist_tension_1_3498933   </tmpdir>  <free>      6 GB </free> 
+</Directories>
+
+<Installation>
+     <Version> 2024 6.24-1 </Version>
+       <Build> 2023_09_21-06.55.25 RELr426 190762 </Build>
+  <Executable> /usr/SIMULIA/EstProducts/2024/linux_a64/code/bin/standard </Executable>
+</Installation>
+

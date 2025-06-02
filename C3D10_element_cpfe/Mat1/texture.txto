@@ -1,0 +1,61 @@
+
+*-----   Initial Assigned Orientations -----*
+    ang1    ang2    ang3     igrn    intpt   ielem 
+  131.73   86.26  229.29       1       1       1
+  131.73   86.26  229.29       1       2       1
+  131.73   86.26  229.29       1       3       1
+  131.73   86.26  229.29       1       4       1
+
+*-----   Initial Assigned Orientations -----*
+    ang1    ang2    ang3     igrn    intpt   ielem 
+  131.73   86.26  229.29       1       1       1
+  131.73   86.26  229.29       1       2       1
+  131.73   86.26  229.29       1       3       1
+  131.73   86.26  229.29       1       4       1
+
+*-----   Initial Assigned Orientations -----*
+    ang1    ang2    ang3     igrn    intpt   ielem 
+  131.73   86.26  229.29       1       1       1
+  131.73   86.26  229.29       1       2       1
+  131.73   86.26  229.29       1       3       1
+  131.73   86.26  229.29       1       4       1
+
+*-----   Euler Angles at incr       20 -----*
+    ang1    ang2    ang3     igrn    intpt   ielem     kappa(1)    d_eff
+  131.73   86.25 -130.79       1       1       1        55.70          0.55E-02
+
+*-----   Euler Angles at incr       20 -----*
+    ang1    ang2    ang3     igrn    intpt   ielem     kappa(1)    d_eff
+  131.73   86.25 -130.79       1       1       1        55.70          0.55E-02
+
+*-----   Euler Angles at incr       40 -----*
+    ang1    ang2    ang3     igrn    intpt   ielem     kappa(1)    d_eff
+  131.72   86.22 -130.95       1       1       1        55.70          0.54E-02
+
+*-----   Euler Angles at incr       40 -----*
+    ang1    ang2    ang3     igrn    intpt   ielem     kappa(1)    d_eff
+  131.72   86.22 -130.95       1       1       1        55.70          0.54E-02
+
+*-----   Euler Angles at incr       60 -----*
+    ang1    ang2    ang3     igrn    intpt   ielem     kappa(1)    d_eff
+  131.71   86.19 -131.11       1       1       1        55.70          0.53E-02
+
+*-----   Euler Angles at incr       60 -----*
+    ang1    ang2    ang3     igrn    intpt   ielem     kappa(1)    d_eff
+  131.71   86.19 -131.11       1       1       1        55.70          0.53E-02
+
+*-----   Euler Angles at incr       80 -----*
+    ang1    ang2    ang3     igrn    intpt   ielem     kappa(1)    d_eff
+  131.69   86.15 -131.27       1       1       1        55.70          0.52E-02
+
+*-----   Euler Angles at incr       80 -----*
+    ang1    ang2    ang3     igrn    intpt   ielem     kappa(1)    d_eff
+  131.69   86.15 -131.27       1       1       1        55.70          0.52E-02
+
+*-----   Euler Angles at incr      100 -----*
+    ang1    ang2    ang3     igrn    intpt   ielem     kappa(1)    d_eff
+  131.68   86.12 -131.42       1       1       1        55.70          0.52E-02
+
+*-----   Euler Angles at incr      100 -----*
+    ang1    ang2    ang3     igrn    intpt   ielem     kappa(1)    d_eff
+  131.68   86.12 -131.42       1       1       1        55.70          0.52E-02

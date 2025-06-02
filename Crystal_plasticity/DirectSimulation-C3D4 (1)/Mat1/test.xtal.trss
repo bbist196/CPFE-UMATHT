@@ -1,0 +1,4 @@
+ INCR       TIME         E_11         SIGMA_11
+ (elem #     1,  qpt #  1,  grn #     1)
+ (for uniaxial loading along X-direction / MPS runs)
+       1   0.00000E+00   0.00000E+00  -0.18686E-01
