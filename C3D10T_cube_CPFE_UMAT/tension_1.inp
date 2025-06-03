@@ -1689,7 +1689,7 @@
    1679,  0.447911084, -0.0587115996,  0.436113507 
    1680,  0.345833391, -0.0541666076, 0.0555631816 
    1681, 0.0600982942, -0.260589331, 0.0622988008 
-*Element, type=C3D4T 
+*Element, type=C3D10T 
    1, 820, 821, 822, 823 
    2, 285, 822, 824, 825 
    3, 826, 827, 828, 292 
@@ -10266,7 +10266,7 @@ Part-1-1.FixedZ-Node, 3, 3
 **
 ** Name: BC-5 Type: Displacement/Rotation 
 *Boundary, amplitude=Amp-1 
-Part-1-1.DISPX, 1, 1, 1.
+Part-1-1.DISPX, 1, 1, 0.01
 ** Name: SurfaceH Type: Temperature
 *Boundary, amplitude=Amp-1
 Hsurface, 11, 11, 2.659e13 

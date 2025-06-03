@@ -28,10 +28,10 @@ include 'uexternaldb.f90'
 
       character*80, intent(in)  :: cmname
     integer:: ntens, ntgrd, nstatv, nprops, noel, npt, kspt, kstep, kinc, layer, kflag, NTRAPS, K1, i, id
-    real:: u, dudt, temp, dtemp, dtime, pnewdt, cl, D, xNl, Vh, R, T, b, DU2, DUDT2
+    real(kind=8):: u, dudt, temp, dtemp, dtime, pnewdt, cl, D, xNl, Vh, R, T, b, DU2, DUDT2
     
          
-     real::                &
+     real(kind=8)::                &
      dudg(ntgrd),          &! Variation of internal thermal energy per unit mass with respect to the spatial gradients of temperature
      flux(ntgrd),          &! Heat flux vector, , at the end of the increment.
      dfdt(ntgrd),          &! Variation of the heat flux vector with respect to temperature

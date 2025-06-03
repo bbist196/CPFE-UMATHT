@@ -1,0 +1,14 @@
+<?xml version="1.0"?><msgwrapper><Started><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">C3D10T_1</jobName><clientHost type="string">dhcp-10-132-10-107</clientHost><handle type="integer">0</handle></Started>
+<Odb_File><file type="string">/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/C3D10T_cube_CPFE_UMAT/C3D10T_1.odb</file><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">C3D10T_1</jobName></Odb_File>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">C3D10T_1</jobName></Completed>
+<Started><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">C3D10T_1</jobName><clientHost type="string">dhcp-10-132-10-107</clientHost><handle type="integer">0</handle></Started>
+<Step><stepId type="integer">1</stepId><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">C3D10T_1</jobName></Step>
+<Odb_Frame><step type="integer">0</step><frame type="integer">0</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">C3D10T_1</jobName></Odb_Frame>
+<MEMORY_ESTIMATE><memory type="float">230</memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">C3D10T_1</jobName></MEMORY_ESTIMATE>
+<PHYSICAL_MEMORY><physical_memory type="float">16384</physical_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">C3D10T_1</jobName></PHYSICAL_MEMORY>
+<MINIMUM_MEMORY><minimum_memory type="float">39</minimum_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">C3D10T_1</jobName></MINIMUM_MEMORY>
+<Odb_Frame><step type="integer">0</step><frame type="integer">1</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">C3D10T_1</jobName></Odb_Frame>
+<Status><step type="integer">1</step><increment type="integer">1</increment><attempts type="integer">1</attempts><severe type="integer">0</severe><equilibrium type="integer">1</equilibrium><iterations type="integer">1</iterations><totalTime type="float">1</totalTime><stepTime type="float">1</stepTime><timeIncrement type="float">1</timeIncrement><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">C3D10T_1</jobName></Status>
+<End_Step><stepId type="integer">1</stepId><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">C3D10T_1</jobName></End_Step>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">C3D10T_1</jobName></Completed>
+<JOB_COMPLETED><time type="string">Mon Jun  2 14:16:56 2025</time><jobName type="string">C3D10T_1</jobName></JOB_COMPLETED></msgwrapper>

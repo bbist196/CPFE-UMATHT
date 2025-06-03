@@ -97,7 +97,7 @@ Fixedz, 2, 2
 Fixedz, 3, 3
 ** Name: BC-2 Type: Displacement/Rotation
 *Boundary, amplitude=Amp-1 
-Dispz, 3, 3, 2
+Dispz, 3, 3, 0.01
 ** Name: Fixedz Type: Temperature
 *Boundary, amplitude=Amp-1
 Temp, 11, 11, 2.659e13

@@ -1,6 +1,6 @@
 1
 
-   Abaqus 2024                                  Date 27-Dec-2024   Time 10:58:13
+   Abaqus 2024                                  Date 02-Jun-2025   Time 13:12:05
    For use by UNIVERSITY OF WYOMING under license from Dassault Systemes or its subsidiary.
 
 
@@ -94,7 +94,7 @@
   *Elset, elset=ASSEMBLY_PART-1-1_MAT1_GRN8
   *Elset, elset=ASSEMBLY_PART-1-1_SET-1
   *Elset, elset=ASSEMBLY_SET-102
-  *coupledtemperature-displacement, creep=NONE, deltmx=0
+  *coupledtemperature-displacement, creep=NONE, deltmx=10000000000000
   *material, name=MAT1_GRN1
   *density
   *depvar
@@ -160,10 +160,12 @@
   *boundary
   *boundary
   *boundary, amplitude=AMP-1
+  *boundary, amplitude=AMP-1
   *boundary
   *boundary
   *boundary
   *boundary
+  *boundary, amplitude=AMP-1
   *boundary, amplitude=AMP-1
   *output, field, frequency=2
   *output, history, frequency=0
@@ -181,7 +183,8 @@
   *output, history, frequency=0
   *Step, name=Step-1, nlgeom=YES, inc=10000, unsymm=YES, amplitude=RAMP
   *Step, name=Step-1, nlgeom=YES, inc=10000, unsymm=YES, amplitude=RAMP
-  *coupledtemperature-displacement, creep=NONE, deltmx=0
+  *coupledtemperature-displacement, creep=NONE, deltmx=10000000000000
+  *boundary, amplitude=AMP-1
   *boundary, amplitude=AMP-1
   *output, field, frequency=2
   *nodeoutput
@@ -193,7 +196,8 @@
   *boundary
   *boundary
   *Step, name=Step-1, nlgeom=YES, inc=10000, unsymm=YES, amplitude=RAMP
-  *coupledtemperature-displacement, creep=NONE, deltmx=0
+  *coupledtemperature-displacement, creep=NONE, deltmx=10000000000000
+  *boundary, amplitude=AMP-1
   *boundary, amplitude=AMP-1
   *endstep
 
@@ -225,7 +229,7 @@
        WALLCLOCK TIME (SEC) =            1
 1
 
-   Abaqus 2024                                  Date 27-Dec-2024   Time 10:58:15
+   Abaqus 2024                                  Date 02-Jun-2025   Time 13:12:07
    For use by UNIVERSITY OF WYOMING under license from Dassault Systemes or its subsidiary.
 
      OneFifthMesh-periodic                                                                     STEP    1  INCREMENT    1
@@ -246,7 +250,7 @@
           CREEP AND SWELLING EFFECTS ARE OMITTED IN THIS STEP
 
      THE SIZE OF THE TIME INCREMENT IS CONTROLLED BY -
-          THE TEMPERATURE CHANGE PER INCREMENT NOT EXCEEDING            0.00    
+          THE TEMPERATURE CHANGE PER INCREMENT NOT EXCEEDING           1.000E+13
           THE RATE DEPENDENCY WILL BE CONSIDERED IN THIS STEP
 
           CREEP AND SWELLING EFFECTS WILL BE IGNORED.
@@ -292,23 +296,3 @@
           BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
           ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
       (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
-
-
-          THE ANALYSIS IS ENDED BECAUSE OF THE PROBLEMS ENCOUNTERED
-          LOOK AT THE MSG FILE FOR THE CAUSE OF THE TERMINATION
-
-
-
-                              ANALYSIS IS ENDED
-                              WITH      1 ERROR MESSAGES ON THE MSG FILE
-                              AND       2 WARNING MESSAGES ON THE DAT FILE
-                              AND   33640 WARNING MESSAGES ON THE MSG FILE
-                                    33620 WARNINGS ARE FOR NUMERICAL PROBLEMS
-
-
-
-     JOB TIME SUMMARY
-       USER TIME (SEC)      =     1.18E+02
-       SYSTEM TIME (SEC)    =      4.8    
-       TOTAL CPU TIME (SEC) =     1.23E+02
-       WALLCLOCK TIME (SEC) =           32

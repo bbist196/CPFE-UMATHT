@@ -1,5 +1,5 @@
 from driverConstants import *
-from driverStandardMPI import StandardMPIAnalysis
+from driverStandard import StandardAnalysis
 import driverUtils, sys
 options = {
     'SIMExt':'.sim',
@@ -19,7 +19,6 @@ options = {
     'contact':OFF,
     'cosimulation':OFF,
     'coupledProcedure':ON,
-    'cpus':4,
     'cpusValidated':True,
     'cse':OFF,
     'cyclicSymmetryModel':OFF,
@@ -69,13 +68,8 @@ options = {
     'modifiedTet':OFF,
     'moldflowFiles':[],
     'moldflowMaterial':OFF,
-    'mp_file_system':(DETECT, DETECT),
-    'mp_head_node':('dhcp-10-132-10-107.uwyo.edu', 'dhcp-10-132-10-107', '10.132.10.107'),
-    'mp_host_list':(('dhcp-10-132-10-107', 4),),
-    'mp_mode':MPI,
+    'mp_mode':THREADS,
     'mp_mode_requested':MPI,
-    'mp_mpi_validate':OFF,
-    'mp_rsh_command':'ssh -n -l bbist %H %C',
     'multiphysics':OFF,
     'noDmpDirect':[],
     'noMultiHost':[],
@@ -129,6 +123,6 @@ options = {
     'visco':OFF,
     'xplSelect':OFF,
 }
-analysis = StandardMPIAnalysis(options)
+analysis = StandardAnalysis(options)
 status = analysis.run()
 sys.exit(status)

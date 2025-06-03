@@ -1,6 +1,6 @@
 1
 
-   Abaqus 2024                                  Date 27-Dec-2024   Time 10:58:15
+   Abaqus 2024                                  Date 02-Jun-2025   Time 13:12:07
    For use by UNIVERSITY OF WYOMING under license from Dassault Systemes or its subsidiary.
 
  OneFifthMesh-periodic                                                           
@@ -22,7 +22,7 @@
           CREEP AND SWELLING EFFECTS ARE OMITTED IN THIS STEP
 
      THE SIZE OF THE TIME INCREMENT IS CONTROLLED BY -
-          THE TEMPERATURE CHANGE PER INCREMENT NOT EXCEEDING            0.00    
+          THE TEMPERATURE CHANGE PER INCREMENT NOT EXCEEDING           1.000E+13
           THE RATE DEPENDENCY WILL BE CONSIDERED IN THIS STEP
 
           CREEP AND SWELLING EFFECTS WILL BE IGNORED.
@@ -114,11 +114,6 @@
 
      PRINT OF INCREMENT NUMBER, TIME, ETC., TO THE MESSAGE FILE EVERY     1  INCREMENTS
 
-     ELEMENT OPERATIONS WILL BE CARRIED OUT IN PARALLEL USING   4 THREADS ON 1 DOMAIN
-
-     PARALLEL CONTACT TRACKING ENABLED
-
-
      COLLECTING MODEL CONSTRAINT INFORMATION FOR OVERCONSTRAINT CHECKS
 
      COLLECTING STEP CONSTRAINT INFORMATION FOR OVERCONSTRAINT CHECKS
@@ -126,464 +121,12 @@
 
   INCREMENT     1 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-05
  
-     INITIAL ELEMENT LOAD BALANCE
-            DOMAIN    1     THREAD    NUMBER OF ELEMENTS
-                              1            1832
-                              2            2238
-                              3            2152
-                              4            1920
- 
 	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
         NUMBER OF EQUATIONS:  6724
         NUMBER OF RHS:        1
         NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  31ms
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 914 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 277 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 861 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 825 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 865 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 335 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 831 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 884 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 921 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 887 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 922 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 888 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 915 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 881 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 885 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 846 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 886 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 894 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 841 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 843 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 892 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 900 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 873 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 339 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 820 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 821 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 827 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 833 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 850 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 864 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 875 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 877 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 882 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 916 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 58 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 278 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 283 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 285 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 286 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 287 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 289 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 329 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 334 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 338 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 824 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 860 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 862 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 863 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 918 INSTANCE 
-             PART-1-1 D.O.F. 11
-  Typically a zero pivot is associated with an overconstraint in the model. 
- However, Abaqus was not able to identify any chains of constraints that might 
- lead to an overconstraint at this node. This suggests that the model might be 
- in fact insufficiently constrained in this particular degree of freedom. 
- Please check the constraints used in this model. 
-
-
- ***WARNING: Solver problem. Zero pivot when processing D.O.F. 11 of 49 nodes. 
-             The nodes have been identified in node set 
-             WarnNodeSolvProbZeroPiv_11_1_1_1_1.
+        SOLVER ELAPSED TIME:  54ms
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
@@ -605,19 +148,21 @@
              TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
              THE CRITERION FOR ZERO FORCE.
 
- AVERAGE HEAT FLUX                  6.364E+85   TIME AVG. HEAT FLUX   6.364E+85
- LARGEST RESIDUAL HEAT FLUX         2.297E+87   AT NODE        559   DOF 11
+ AVERAGE HEAT FLUX                  5.191E+12   TIME AVG. HEAT FLUX   5.191E+12
+ LARGEST RESIDUAL HEAT FLUX         1.580E+09   AT NODE       1639   DOF 11
    INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ LARGEST INCREMENT OF TEMP.        -2.659E+11   AT NODE          9   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.       -2.659E+11   AT NODE          9   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          TEMP.    CORRECTION TOO LARGE COMPARED TO TEMP.    INCREMENT
  
 	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
         NUMBER OF EQUATIONS:  6724
         NUMBER OF RHS:        1
         NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  22ms
+        SOLVER ELAPSED TIME:  47ms
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
@@ -639,678 +184,522 @@
              TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
              THE CRITERION FOR ZERO FORCE.
 
- AVERAGE HEAT FLUX                  6.272E+85   TIME AVG. HEAT FLUX   6.272E+85
- LARGEST RESIDUAL HEAT FLUX         2.860E+87   AT NODE       1311   DOF 11
+ AVERAGE HEAT FLUX                  5.191E+12   TIME AVG. HEAT FLUX   5.191E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.141E+03   AT NODE       1327   DOF 11
    INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ LARGEST INCREMENT OF TEMP.        -2.659E+11   AT NODE          9   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.550E+05   AT NODE       1591   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -2.574E+05
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-05,  FRACTION OF STEP COMPLETED  1.000E-05
+ STEP TIME COMPLETED       1.000E-05,  TOTAL TIME COMPLETED        1.000E-05
+
+
+  INCREMENT     2 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-05
  
 	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
         NUMBER OF EQUATIONS:  6724
         NUMBER OF RHS:        1
         NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  22ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      2.906E-08   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE      6.300E-21   AT NODE        114   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE      6.300E-21
- LARGEST INCREMENT OF DISP.         5.000E-07   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.       -2.384E-20   AT NODE          6   DOF  3
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
+        SOLVER ELAPSED TIME:  47ms
  
 
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
+ ***WARNING: THE SYSTEM MATRIX HAS 2 NEGATIVE EIGENVALUES.
 
- AVERAGE HEAT FLUX                  6.281E+85   TIME AVG. HEAT FLUX   6.281E+85
- LARGEST RESIDUAL HEAT FLUX         2.860E+87   AT NODE       1311   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+     NEGATIVE EIGENVALUES MEAN THAT THE SYSTEM MATRIX IS NOT 
+     POSITIVE DEFINITE:
+     FOR EXAMPLE, A BIFURCATION (BUCKLING) LOAD MAY HAVE BEEN EXCEEDED.
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 1681 INSTANCE 
+             PART-1-1 D.O.F. 11
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 776 INSTANCE 
+             PART-1-1 D.O.F. 11
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 777 INSTANCE 
+             PART-1-1 D.O.F. 1
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 777 INSTANCE 
+             PART-1-1 D.O.F. 2
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 777 INSTANCE 
+             PART-1-1 D.O.F. 3
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 777 INSTANCE 
+             PART-1-1 D.O.F. 11
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 789 INSTANCE 
+             PART-1-1 D.O.F. 1
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 789 INSTANCE 
+             PART-1-1 D.O.F. 2
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 789 INSTANCE 
+             PART-1-1 D.O.F. 3
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 789 INSTANCE 
+             PART-1-1 D.O.F. 11
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 793 INSTANCE 
+             PART-1-1 D.O.F. 1
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 793 INSTANCE 
+             PART-1-1 D.O.F. 2
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 793 INSTANCE 
+             PART-1-1 D.O.F. 3
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 793 INSTANCE 
+             PART-1-1 D.O.F. 11
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 797 INSTANCE 
+             PART-1-1 D.O.F. 1
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 797 INSTANCE 
+             PART-1-1 D.O.F. 2
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 797 INSTANCE 
+             PART-1-1 D.O.F. 3
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 797 INSTANCE 
+             PART-1-1 D.O.F. 11
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 802 INSTANCE 
+             PART-1-1 D.O.F. 1
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 802 INSTANCE 
+             PART-1-1 D.O.F. 2
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 802 INSTANCE 
+             PART-1-1 D.O.F. 3
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 802 INSTANCE 
+             PART-1-1 D.O.F. 11
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 805 INSTANCE 
+             PART-1-1 D.O.F. 1
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 805 INSTANCE 
+             PART-1-1 D.O.F. 2
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 805 INSTANCE 
+             PART-1-1 D.O.F. 3
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 805 INSTANCE 
+             PART-1-1 D.O.F. 11
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 809 INSTANCE 
+             PART-1-1 D.O.F. 1
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 809 INSTANCE 
+             PART-1-1 D.O.F. 2
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 809 INSTANCE 
+             PART-1-1 D.O.F. 3
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 809 INSTANCE 
+             PART-1-1 D.O.F. 11
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 812 INSTANCE 
+             PART-1-1 D.O.F. 1
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 812 INSTANCE 
+             PART-1-1 D.O.F. 2
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 812 INSTANCE 
+             PART-1-1 D.O.F. 3
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 812 INSTANCE 
+             PART-1-1 D.O.F. 11
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 813 INSTANCE 
+             PART-1-1 D.O.F. 1
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 813 INSTANCE 
+             PART-1-1 D.O.F. 2
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 813 INSTANCE 
+             PART-1-1 D.O.F. 3
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 813 INSTANCE 
+             PART-1-1 D.O.F. 11
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 816 INSTANCE 
+             PART-1-1 D.O.F. 1
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 816 INSTANCE 
+             PART-1-1 D.O.F. 2
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 816 INSTANCE 
+             PART-1-1 D.O.F. 3
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 816 INSTANCE 
+             PART-1-1 D.O.F. 11
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 1574 INSTANCE 
+             PART-1-1 D.O.F. 1
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 1574 INSTANCE 
+             PART-1-1 D.O.F. 2
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 1574 INSTANCE 
+             PART-1-1 D.O.F. 3
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 1574 INSTANCE 
+             PART-1-1 D.O.F. 11
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 1575 INSTANCE 
+             PART-1-1 D.O.F. 1
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 1575 INSTANCE 
+             PART-1-1 D.O.F. 2
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: SOLVER PROBLEM.  ZERO PIVOT WHEN PROCESSING NODE 1575 INSTANCE 
+             PART-1-1 D.O.F. 3
+  Typically a zero pivot is associated with an overconstraint in the model. 
+ However, Abaqus was not able to identify any chains of constraints that might 
+ lead to an overconstraint at this node. This suggests that the model might be 
+ in fact insufficiently constrained in this particular degree of freedom. 
+ Please check the constraints used in this model. 
+
+
+ ***WARNING: Solver problem. Zero pivot when processing D.O.F. 1 of 12 nodes. 
+             The nodes have been identified in node set 
+             WarnNodeSolvProbZeroPiv_1_1_2_1_1.
+
+ ***WARNING: Solver problem. Zero pivot when processing D.O.F. 2 of 12 nodes. 
+             The nodes have been identified in node set 
+             WarnNodeSolvProbZeroPiv_2_1_2_1_1.
+
+ ***WARNING: Solver problem. Zero pivot when processing D.O.F. 3 of 12 nodes. 
+             The nodes have been identified in node set 
+             WarnNodeSolvProbZeroPiv_3_1_2_1_1.
+
+ ***WARNING: Solver problem. Zero pivot when processing D.O.F. 11 of 13 nodes. 
+             The nodes have been identified in node set 
+             WarnNodeSolvProbZeroPiv_11_1_2_1_1.
+ 
+
+ ***NOTE: USER SUBROUTINE REQUESTS A TIME INCREMENT CHANGE.
+
+
+  INCREMENT     2 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  7.500E-06
  
 	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
         NUMBER OF EQUATIONS:  6724
         NUMBER OF RHS:        1
         NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  19ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
-
-
- AVERAGE FORCE                      2.906E-08   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE      5.594E-21   AT NODE       1534   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE      5.594E-21
- LARGEST INCREMENT OF DISP.         5.000E-07   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.       -3.638E-22   AT NODE         23   DOF  2
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
+        SOLVER ELAPSED TIME:  47ms
  
 
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.281E+85   TIME AVG. HEAT FLUX   6.281E+85
- LARGEST RESIDUAL HEAT FLUX         2.860E+87   AT NODE       1311   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-
- ***NOTE: THE SOLUTION APPEARS TO BE DIVERGING. CONVERGENCE IS JUDGED UNLIKELY.
+ ***NOTE: USER SUBROUTINE REQUESTS A TIME INCREMENT CHANGE.
 
 
-  INCREMENT     1 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  2.500E-06
+  INCREMENT     2 STARTS. ATTEMPT NUMBER  3, TIME INCREMENT  5.625E-06
  
 	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
         NUMBER OF EQUATIONS:  6724
         NUMBER OF RHS:        1
         NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  24ms
+        SOLVER ELAPSED TIME:  47ms
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      7.264E-09   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE     -1.360E-14   AT NODE        592   DOF  3
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE     -1.360E-14
- LARGEST INCREMENT OF DISP.         1.250E-07   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.        1.250E-07   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.225E+85   TIME AVG. HEAT FLUX   6.225E+85
- LARGEST RESIDUAL HEAT FLUX        -1.893E+87   AT NODE       1146   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  28ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      7.264E-09   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE     -2.494E-21   AT NODE        846   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE     -2.494E-21
- LARGEST INCREMENT OF DISP.         1.250E-07   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.        1.576E-14   AT NODE        224   DOF  2
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.161E+85   TIME AVG. HEAT FLUX   6.161E+85
- LARGEST RESIDUAL HEAT FLUX         2.224E+87   AT NODE       1487   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  25ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      7.264E-09   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE     -1.509E-21   AT NODE       1365   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE     -1.509E-21
- LARGEST INCREMENT OF DISP.         1.250E-07   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.       -3.677E-22   AT NODE          6   DOF  3
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.161E+85   TIME AVG. HEAT FLUX   6.161E+85
- LARGEST RESIDUAL HEAT FLUX         2.224E+87   AT NODE       1487   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  23ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
-
-
- AVERAGE FORCE                      7.264E-09   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE     -1.681E-21   AT NODE       1177   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE     -1.681E-21
- LARGEST INCREMENT OF DISP.         1.250E-07   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.       -3.372E-23   AT NODE        568   DOF  2
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.161E+85   TIME AVG. HEAT FLUX   6.161E+85
- LARGEST RESIDUAL HEAT FLUX         2.224E+87   AT NODE       1487   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-
- ***NOTE: THE SOLUTION APPEARS TO BE DIVERGING. CONVERGENCE IS JUDGED UNLIKELY.
-
-
-  INCREMENT     1 STARTS. ATTEMPT NUMBER  3, TIME INCREMENT  6.250E-07
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  22ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.816E-09   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE     -8.502E-16   AT NODE        592   DOF  3
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE     -8.502E-16
- LARGEST INCREMENT OF DISP.         3.125E-08   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.        3.125E-08   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.260E+85   TIME AVG. HEAT FLUX   6.260E+85
- LARGEST RESIDUAL HEAT FLUX        -2.154E+87   AT NODE        623   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  22ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.816E-09   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE     -5.310E-22   AT NODE       1476   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE     -5.310E-22
- LARGEST INCREMENT OF DISP.         3.125E-08   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.        9.863E-16   AT NODE        224   DOF  2
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.325E+85   TIME AVG. HEAT FLUX   6.325E+85
- LARGEST RESIDUAL HEAT FLUX         1.643E+87   AT NODE        917   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  22ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.816E-09   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE     -3.474E-22   AT NODE       1277   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE     -3.474E-22
- LARGEST INCREMENT OF DISP.         3.125E-08   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.        1.205E-23   AT NODE        241   DOF  3
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.325E+85   TIME AVG. HEAT FLUX   6.325E+85
- LARGEST RESIDUAL HEAT FLUX         1.643E+87   AT NODE        917   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  22ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
-
-
- AVERAGE FORCE                      1.816E-09   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE     -3.243E-22   AT NODE        402   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE     -3.243E-22
- LARGEST INCREMENT OF DISP.         3.125E-08   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.       -1.121E-23   AT NODE        675   DOF  2
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.325E+85   TIME AVG. HEAT FLUX   6.325E+85
- LARGEST RESIDUAL HEAT FLUX         1.643E+87   AT NODE        917   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-
- ***NOTE: THE SOLUTION APPEARS TO BE DIVERGING. CONVERGENCE IS JUDGED UNLIKELY.
-
-
-  INCREMENT     1 STARTS. ATTEMPT NUMBER  4, TIME INCREMENT  1.563E-07
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  19ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      4.540E-10   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE     -5.314E-17   AT NODE        592   DOF  3
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE     -5.314E-17
- LARGEST INCREMENT OF DISP.         7.813E-09   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.        7.813E-09   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.252E+85   TIME AVG. HEAT FLUX   6.252E+85
- LARGEST RESIDUAL HEAT FLUX        -2.304E+87   AT NODE        928   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  19ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      4.540E-10   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE      1.547E-22   AT NODE       1364   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE      1.547E-22
- LARGEST INCREMENT OF DISP.         7.813E-09   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.        6.301E-17   AT NODE        224   DOF  2
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.240E+85   TIME AVG. HEAT FLUX   6.240E+85
- LARGEST RESIDUAL HEAT FLUX        -2.000E+87   AT NODE       1473   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  19ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      4.540E-10   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE     -7.486E-23   AT NODE       1261   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE     -7.486E-23
- LARGEST INCREMENT OF DISP.         7.813E-09   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.        2.667E-24   AT NODE        159   DOF  2
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.240E+85   TIME AVG. HEAT FLUX   6.240E+85
- LARGEST RESIDUAL HEAT FLUX        -2.000E+87   AT NODE       1473   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  19ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
-
-
- AVERAGE FORCE                      4.540E-10   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE      1.022E-22   AT NODE        318   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE      1.022E-22
- LARGEST INCREMENT OF DISP.         7.813E-09   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.       -2.973E-24   AT NODE        153   DOF  2
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.240E+85   TIME AVG. HEAT FLUX   6.240E+85
- LARGEST RESIDUAL HEAT FLUX        -2.000E+87   AT NODE       1473   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-
- ***NOTE: THE SOLUTION APPEARS TO BE DIVERGING. CONVERGENCE IS JUDGED UNLIKELY.
-
-
-  INCREMENT     1 STARTS. ATTEMPT NUMBER  5, TIME INCREMENT  3.906E-08
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  23ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.135E-10   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE     -3.321E-18   AT NODE        592   DOF  3
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE     -3.321E-18
- LARGEST INCREMENT OF DISP.         1.953E-09   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.        1.953E-09   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.285E+85   TIME AVG. HEAT FLUX   6.285E+85
- LARGEST RESIDUAL HEAT FLUX        -1.913E+87   AT NODE        677   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  19ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.135E-10   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE     -2.544E-23   AT NODE       1573   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE     -2.544E-23
- LARGEST INCREMENT OF DISP.         1.953E-09   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.       -7.303E-18   AT NODE         25   DOF  3
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.331E+85   TIME AVG. HEAT FLUX   6.331E+85
- LARGEST RESIDUAL HEAT FLUX        -2.040E+87   AT NODE       1268   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  19ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.135E-10   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE      2.295E-23   AT NODE       1492   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE      2.295E-23
- LARGEST INCREMENT OF DISP.         1.953E-09   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.        7.556E-25   AT NODE          4   DOF  2
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.331E+85   TIME AVG. HEAT FLUX   6.331E+85
- LARGEST RESIDUAL HEAT FLUX        -2.040E+87   AT NODE       1268   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
- 	1 HOST x 1 MPI RANK PER HOST x 4 THREADS PER RANK
-        NUMBER OF EQUATIONS:  6724
-        NUMBER OF RHS:        1
-        NUMBER OF FLOPS:      1.372e+09
-        SOLVER ELAPSED TIME:  18ms
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
-
-
- AVERAGE FORCE                      1.135E-10   TIME AVG. FORCE       1.000E-02
- LARGEST SCALED RESIDUAL FORCE     -2.255E-23   AT NODE       1592   DOF  1
-   INSTANCE: PART-1-1                                                                        
-  CORRESPONDING RESIDUAL FORCE     -2.255E-23
- LARGEST INCREMENT OF DISP.         1.953E-09   AT NODE         13   DOF  1
-   INSTANCE: PART-1-1                                                                        
- LARGEST CORRECTION TO DISP.       -9.429E-25   AT NODE        574   DOF  2
-   INSTANCE: PART-1-1                                                                        
-          THERE IS ZERO FORCE     EVERYWHERE
- 
-
- ***WARNING: THERE IS ZERO FORCE EVERYWHERE IN THE MODEL BASED ON THE DEFAULT 
-             CRITERION. PLEASE CHECK THE VALUE OF THE AVERAGE FORCE DURING THE 
-             CURRENT ITERATION TO VERIFY THAT THE FORCE IS SMALL ENOUGH TO BE 
-             TREATED AS ZERO. IF NOT, PLEASE USE THE SOLUTION CONTROLS TO RESET 
-             THE CRITERION FOR ZERO FORCE.
-
- AVERAGE HEAT FLUX                  6.331E+85   TIME AVG. HEAT FLUX   6.331E+85
- LARGEST RESIDUAL HEAT FLUX        -2.040E+87   AT NODE       1268   DOF 11
-   INSTANCE: PART-1-1                                                                        
- ALL TEMP.    INCREMENTS ARE ZERO
- ALL CORRECTION TO TEMP.    ARE ZERO
-          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-
- ***NOTE: THE SOLUTION APPEARS TO BE DIVERGING. CONVERGENCE IS JUDGED UNLIKELY.
- 
-
- ***ERROR: TOO MANY ATTEMPTS MADE FOR THIS INCREMENT
-
-
-
-     ANALYSIS SUMMARY:
-     TOTAL OF          1  INCREMENTS
-                       5  CUTBACKS IN AUTOMATIC INCREMENTATION
-                      20  ITERATIONS INCLUDING CONTACT ITERATIONS IF PRESENT
-                      20  PASSES THROUGH THE EQUATION SOLVER OF WHICH 
-                      20  INVOLVE MATRIX DECOMPOSITION, INCLUDING
-                       0  DECOMPOSITION(S) OF THE MASS MATRIX
-                       1  REORDERING OF EQUATIONS TO MINIMIZE WAVEFRONT
-                       0  ADDITIONAL RESIDUAL EVALUATIONS FOR LINE SEARCHES
-                       0  ADDITIONAL OPERATOR EVALUATIONS FOR LINE SEARCHES
-                       2  WARNING MESSAGES DURING USER INPUT PROCESSING
-                   33640  WARNING MESSAGES DURING ANALYSIS
-                   33620  ANALYSIS WARNINGS ARE NUMERICAL PROBLEM MESSAGES
-                       0  ANALYSIS WARNINGS ARE NEGATIVE EIGENVALUE MESSAGES
-                       1  ERROR MESSAGES
-
-
-
-     JOB TIME SUMMARY
-       USER TIME (SEC)      =     1.18E+02
-       SYSTEM TIME (SEC)    =      4.8    
-       TOTAL CPU TIME (SEC) =     1.23E+02
-       WALLCLOCK TIME (SEC) =           32
-       MEMORY PEAK (GB)     =            0
+----------- JOB HAS BEEN INTERRUPTED  --------------
+*** ABAQUS/standard has been terminated by the Batch Queue Management
