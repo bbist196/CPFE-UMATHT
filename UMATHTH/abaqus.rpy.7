@@ -1,0 +1,240 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2024 replay file
+# Internal Version: 2023_09_21-06.55.25 RELr426 190762
+# Run by bbist on Wed Jun 11 14:02:21 2025
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=298.714569091797, 
+    height=176.805557250977)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+import os
+os.chdir(
+    r"/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_fine_mesh")
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=20.0)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=STANDALONE)
+s.rectangle(point1=(0.0, 0.0), point2=(1.0, 1.0))
+p = mdb.models['Model-1'].Part(name='Part-1', dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['Part-1']
+p.BaseSolidExtrude(sketch=s, depth=0.01)
+s.unsetPrimaryObject()
+p = mdb.models['Model-1'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].sketches['__profile__']
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+mdb.models['Model-1'].Material(name='Material-1')
+mdb.models['Model-1'].materials['Material-1'].Depvar()
+mdb.models['Model-1'].materials['Material-1'].Density(table=((1.0, ), ))
+mdb.models['Model-1'].materials['Material-1'].Elastic(table=((2600000.0, 0.3), 
+    ))
+mdb.models['Model-1'].HomogeneousSolidSection(name='Section-1', 
+    material='Material-1', thickness=None)
+p = mdb.models['Model-1'].parts['Part-1']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['Part-1']
+p.SectionAssignment(region=region, sectionName='Section-1', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+a = mdb.models['Model-1'].rootAssembly
+a.DatumCsysByDefault(CARTESIAN)
+p = mdb.models['Model-1'].parts['Part-1']
+a.Instance(name='Part-1-1', part=p, dependent=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.models['Model-1'].StaticStep(name='Step-1', previous='Initial')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON, adaptiveMeshConstraints=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.96066, 
+    farPlane=3.82036, width=1.45627, height=0.870655, cameraPosition=(-1.34031, 
+    2.71822, -0.216134), cameraUpVector=(-0.398124, -0.809489, -0.431537), 
+    cameraTarget=(0.525676, 0.499593, -0.0202698))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.12169, 
+    farPlane=3.65934, width=0.478477, height=0.286065, viewOffsetX=-0.103428, 
+    viewOffsetY=0.112062)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#1 ]', ), )
+region = a.Set(faces=faces1, name='Set-1')
+mdb.models['Model-1'].EncastreBC(name='BC-1', createStepName='Step-1', 
+    region=region, localCsys=None)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.9606, 
+    farPlane=3.46216, width=0.442149, height=0.264346, cameraPosition=(2.93371, 
+    1.71195, 0.115129), cameraUpVector=(-0.694897, 0.543821, -0.470507), 
+    cameraTarget=(0.453317, 0.20483, -0.0219989), viewOffsetX=-0.0955756, 
+    viewOffsetY=0.103554)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.86904, 
+    farPlane=3.55372, width=1.18155, height=0.706407, viewOffsetX=-0.0931073, 
+    viewOffsetY=0.0941282)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.89937, 
+    farPlane=3.53968, width=1.20072, height=0.717868, cameraPosition=(2.97136, 
+    1.55105, 0.485459), cameraUpVector=(-0.674286, 0.683573, -0.279402), 
+    cameraTarget=(0.445643, 0.238237, -0.0975152), viewOffsetX=-0.0946179, 
+    viewOffsetY=0.0956554)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.97835, 
+    farPlane=3.4607, width=0.580883, height=0.347291, viewOffsetX=-0.0382208, 
+    viewOffsetY=0.141056)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#4 ]', ), )
+region = a.Set(faces=faces1, name='Set-2')
+mdb.models['Model-1'].DisplacementBC(name='BC-2', createStepName='Step-1', 
+    region=region, u1=0.1, u2=UNSET, u3=UNSET, ur1=UNSET, ur2=UNSET, ur3=UNSET, 
+    amplitude=UNSET, fixed=OFF, distributionType=UNIFORM, fieldName='', 
+    localCsys=None)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON, loads=OFF, 
+    bcs=OFF, predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['Part-1']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#1 ]', ), )
+p.setMeshControls(regions=pickedRegions, elemShape=TET, technique=FREE)
+elemType1 = mesh.ElemType(elemCode=C3D20R)
+elemType2 = mesh.ElemType(elemCode=C3D15)
+elemType3 = mesh.ElemType(elemCode=C3D10)
+p = mdb.models['Model-1'].parts['Part-1']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+pickedRegions =(cells, )
+p.setElementType(regions=pickedRegions, elemTypes=(elemType1, elemType2, 
+    elemType3))
+p = mdb.models['Model-1'].parts['Part-1']
+p.seedPart(size=0.8, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['Part-1']
+p.generateMesh()
+a1 = mdb.models['Model-1'].rootAssembly
+a1.regenerate()
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+mdb.Job(name='Flat_C3D10_elem2', model='Model-1', description='', 
+    type=ANALYSIS, atTime=None, waitMinutes=0, waitHours=0, queue=None, 
+    memory=90, memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, numThreadsPerMpiProcess=1, 
+    multiprocessingMode=DEFAULT, numCpus=1, numGPUs=0)
+mdb.jobs['Flat_C3D10_elem2'].submit(consistencyChecking=OFF, datacheckJob=True)
+#: The job input file "Flat_C3D10_elem2.inp" has been submitted for analysis.
+#: Error in job Flat_C3D10_elem2: THE NUMBER OF SOLUTION-DEPENDENT STATE VARIABLES CAN NOT BE SET EQUAL TO ZERO.
+#: Job Flat_C3D10_elem2: Analysis Input File Processor aborted due to errors.
+#: Error in job Flat_C3D10_elem2: Analysis Input File Processor exited with an error - Please see the  Flat_C3D10_elem2.dat file for possible error messages if the file exists.
+#: Job Flat_C3D10_elem2 aborted due to errors.
+mdb.jobs['Flat_C3D10_elem2'].submit(consistencyChecking=OFF)
+#: The job input file "Flat_C3D10_elem2.inp" has been submitted for analysis.
+#: Error in job Flat_C3D10_elem2: THE NUMBER OF SOLUTION-DEPENDENT STATE VARIABLES CAN NOT BE SET EQUAL TO ZERO.
+#: Job Flat_C3D10_elem2: Analysis Input File Processor aborted due to errors.
+#: Error in job Flat_C3D10_elem2: Analysis Input File Processor exited with an error - Please see the  Flat_C3D10_elem2.dat file for possible error messages if the file exists.
+#: Job Flat_C3D10_elem2 aborted due to errors.
+o3 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_fine_mesh/Flat_C3D10_elem2.odb')
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_fine_mesh/Flat_C3D10_elem2.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          4
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+#* There is no valid step data available on the database. If the analysis is 
+#* running, the database must be closed and reopened once the results have been 
+#* initialized. The requested operation has been cancelled.
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_fine_mesh/Flat_C3D10_elem2.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_fine_mesh/Flat_C3D10_elem2.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_fine_mesh/Flat_C3D10_elem2.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.525676, 
+    0.499593, 2.88534), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV71', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV28', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV71', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/Code_verification/Verification_CPFE_UMATHT_code/2D_test_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/Code_verification/Verification_CPFE_UMATHT_code/2D_test_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          3
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/Code_verification/Verification_CPFE_UMATHT_code/2D_test_elem_1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/Code_verification/Verification_CPFE_UMATHT_code/2D_test_elem_1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          3
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))

@@ -1,0 +1,4872 @@
+1
+
+   Abaqus 2024                                  Date 10-Jun-2025   Time 15:39:22
+   For use by UNIVERSITY OF WYOMING under license from Dassault Systemes or its subsidiary.
+
+                                                                                 
+                                                                                 
+ STEP    1     INCREMENT     1     STEP TIME    0.00    
+
+
+                        S T E P       1     C O U P L E D - T E M P E R A T U R E - D I S P L A C E M E N T   A N A L Y S I S
+
+
+                                                                                          
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                1.000E-04
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-25
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                1.000E-02
+
+          CREEP AND SWELLING EFFECTS ARE OMITTED IN THIS STEP
+
+     THE SIZE OF THE TIME INCREMENT IS CONTROLLED BY -
+          THE TEMPERATURE CHANGE PER INCREMENT NOT EXCEEDING           1.000E+13
+          THE RATE DEPENDENCY WILL BE CONSIDERED IN THIS STEP
+
+          CREEP AND SWELLING EFFECTS WILL BE IGNORED.
+
+ CONVERGENCE TOLERANCE PARAMETERS FOR FORCE    
+     CRITERION FOR RESIDUAL FORCE     FOR A NONLINEAR PROBLEM          5.000E-03
+     CRITERION FOR DISP.    CORRECTION IN A NONLINEAR PROBLEM          1.000E-02
+     INITIAL VALUE OF TIME AVERAGE FORCE                               1.000E-02
+     AVERAGE FORCE     IS TIME AVERAGE FORCE    
+     ALTERNATE CRIT. FOR RESIDUAL FORCE     FOR A NONLINEAR PROBLEM    2.000E-02
+     CRITERION FOR ZERO FORCE     RELATIVE TO TIME AVRG. FORCE         1.000E-05
+     CRITERION FOR RESIDUAL FORCE     WHEN THERE IS ZERO FLUX          1.000E-05
+     CRITERION FOR DISP.    CORRECTION WHEN THERE IS ZERO FLUX         1.000E-03
+     CRITERION FOR RESIDUAL FORCE     FOR A LINEAR INCREMENT           1.000E-08
+     FIELD CONVERSION RATIO                                             1.00    
+     CRITERION FOR ZERO FORCE     REL. TO TIME AVRG. MAX. FORCE        1.000E-05
+     CRITERION FOR ZERO DISP.    RELATIVE TO CHARACTERISTIC LENGTH     1.000E-08
+
+ CONVERGENCE TOLERANCE PARAMETERS FOR HEAT FLUX
+     CRITERION FOR RESIDUAL HEAT FLUX FOR A NONLINEAR PROBLEM          5.000E-03
+     CRITERION FOR TEMP.    CORRECTION IN A NONLINEAR PROBLEM          1.000E-02
+     INITIAL VALUE OF TIME AVERAGE HEAT FLUX                           1.000E-02
+     AVERAGE HEAT FLUX IS TIME AVERAGE HEAT FLUX
+     ALTERNATE CRIT. FOR RESIDUAL HEAT FLUX FOR A NONLINEAR PROBLEM    2.000E-02
+     CRITERION FOR ZERO HEAT FLUX RELATIVE TO TIME AVRG. HEAT FLUX     1.000E-05
+     CRITERION FOR RESIDUAL HEAT FLUX WHEN THERE IS ZERO FLUX          1.000E-05
+     CRITERION FOR TEMP.    CORRECTION WHEN THERE IS ZERO FLUX         1.000E-03
+     CRITERION FOR RESIDUAL HEAT FLUX FOR A LINEAR INCREMENT           1.000E-08
+     FIELD CONVERSION RATIO                                             1.00    
+     CRITERION FOR ZERO HEAT FLUX REL. TO TIME AVRG. MAX. HEAT FLUX    1.000E-05
+
+     VOLUMETRIC STRAIN COMPATIBILITY TOLERANCE FOR HYBRID SOLIDS       1.000E-05
+     AXIAL STRAIN COMPATIBILITY TOLERANCE FOR HYBRID BEAMS             1.000E-05
+     TRANS. SHEAR STRAIN COMPATIBILITY TOLERANCE FOR HYBRID BEAMS      1.000E-05
+     SOFT CONTACT CONSTRAINT COMPATIBILITY TOLERANCE FOR P>P0          5.000E-03
+     SOFT CONTACT CONSTRAINT COMPATIBILITY TOLERANCE FOR P=0.0         0.100    
+     CONTACT FORCE ERROR TOLERANCE FOR CONVERT SDI=YES                 1.00    
+     DISPLACEMENT COMPATIBILITY TOLERANCE FOR DCOUP ELEMENTS           1.000E-05
+     ROTATION COMPATIBILITY TOLERANCE FOR DCOUP ELEMENTS               1.000E-05
+
+ EQUILIBRIUM WILL BE CHECKED FOR SEVERE DISCONTINUITY ITERATIONS
+
+ TIME INCREMENTATION CONTROL PARAMETERS:
+     FIRST EQUILIBRIUM ITERATION FOR CONSECUTIVE DIVERGENCE CHECK              4
+     EQUILIBRIUM ITERATION AT WHICH LOG. CONVERGENCE RATE CHECK BEGINS         8
+     EQUILIBRIUM ITERATION AFTER WHICH ALTERNATE RESIDUAL IS USED              9
+     MAXIMUM EQUILIBRIUM ITERATIONS ALLOWED                                   16
+     EQUILIBRIUM ITERATION COUNT FOR CUT-BACK IN NEXT INCREMENT               10
+     MAXIMUM EQUILIB. ITERS IN TWO INCREMENTS FOR TIME INCREMENT INCREASE      4
+     MAXIMUM ITERATIONS FOR SEVERE DISCONTINUITIES                            50
+     MAXIMUM ATTEMPTS ALLOWED IN AN INCREMENT                                  5
+     MAXIMUM DISCON. ITERS IN TWO INCREMENTS FOR TIME INCREMENT INCREASE      50
+     MAXIMUM CONTACT AUGMENTATIONS FOR *SURFACE BEHAVIOR,AUGMENTED LAGRANGE   50
+     CONSECUTIVE INCS MEETING TIME INTEG. TOL. FOR TIME INC. INCREASE          3
+     CUT-BACK FACTOR AFTER DIVERGENCE                                 0.2500    
+     CUT-BACK FACTOR FOR TOO SLOW CONVERGENCE                         0.5000    
+     CUT-BACK FACTOR AFTER TOO MANY EQUILIBRIUM ITERATIONS            0.7500    
+     CUT-BACK FACTOR AFTER TOO MANY SEVERE DISCONTINUITY ITERATIONS   0.2500    
+     CUT-BACK FACTOR AFTER PROBLEMS IN ELEMENT ASSEMBLY               0.2500    
+     INCREASE FACTOR AFTER TWO INCREMENTS THAT CONVERGE QUICKLY        1.500    
+     MAX. TIME INCREMENT INCREASE FACTOR ALLOWED                       1.500    
+     MAX. TIME INCREMENT INCREASE FACTOR ALLOWED (DYNAMICS)            1.250    
+     MAX. TIME INCREMENT INCREASE FACTOR ALLOWED (DIFFUSION)           2.000    
+     MINIMUM TIME INCREMENT RATIO FOR EXTRAPOLATION TO OCCUR          0.1000    
+     CUT-BACK FACTOR WHEN TIME INTEGRATION ACCURACY TOL. EXCEEDED     0.8500    
+     MAX. RATIO OF TIME INTEG. MEASURE TO TOL. FOR TIME INC. INCREASE 0.7500    
+     INCREASE FACTOR FOR TIME INCREMENT WHEN POSSIBLE                 0.8000    
+     MIN. TIME INC. INCREASE FACTOR IN LINEAR TRANSIENT PROBLEMS      0.9500    
+     MAX. RATIO OF TIME INCREMENT TO STABILITY LIMIT                   1.000    
+     FRACTION OF STABILITY LIMIT FOR NEW TIME INCREMENT               0.9500    
+     TIME INCREMENT INCREASE FACTOR BEFORE A TIME POINT                1.000    
+     GLOBAL STABILIZATION CONTROL IS NOT USED
+
+          PRINT OF INCREMENT NUMBER, TIME, ETC., EVERY    1  INCREMENTS
+
+     THE MAXIMUM NUMBER OF INCREMENTS IN THIS STEP IS                 1000000
+
+          LARGE DISPLACEMENT THEORY WILL BE USED
+
+          UNSYMMETRIC MATRIX STORAGE AND SOLUTION WILL BE USED
+
+     LINEAR EXTRAPOLATION WILL BE USED
+
+     CHARACTERISTIC ELEMENT LENGTH     0.500    
+
+     DETAILS REGARDING ACTUAL SOLUTION WAVEFRONT REQUESTED
+
+     DETAILED OUTPUT OF DIAGNOSTICS TO DATABASE REQUESTED
+
+     PRINT OF INCREMENT NUMBER, TIME, ETC., TO THE MESSAGE FILE EVERY     1  INCREMENTS
+
+     COLLECTING MODEL CONSTRAINT INFORMATION FOR OVERCONSTRAINT CHECKS
+
+     COLLECTING STEP CONSTRAINT INFORMATION FOR OVERCONSTRAINT CHECKS
+
+
+  INCREMENT     1 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-04
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  7ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.156       TIME AVG. FORCE       0.156    
+ LARGEST SCALED RESIDUAL FORCE     -3.818E-06   AT NODE         20   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE     -3.818E-06
+ LARGEST INCREMENT OF DISP.         1.000E-05   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        1.000E-05   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          DISP.    CORRECTION TOO LARGE COMPARED TO DISP.    INCREMENT
+
+ AVERAGE HEAT FLUX                  1.105E+13   TIME AVG. HEAT FLUX   1.105E+13
+ LARGEST RESIDUAL HEAT FLUX         2.516E+11   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+09   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.632E+09   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      0.156       TIME AVG. FORCE       0.156    
+ LARGEST SCALED RESIDUAL FORCE      4.508E-11   AT NODE          4   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      4.508E-11
+ LARGEST INCREMENT OF DISP.         1.000E-05   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -1.744E-11   AT NODE         17   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.106E+13   TIME AVG. HEAT FLUX   1.106E+13
+ LARGEST RESIDUAL HEAT FLUX        -3.034E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+09   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        5.247E+06   AT NODE          3   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -7.469E+08
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-04,  FRACTION OF STEP COMPLETED  1.000E-04
+ STEP TIME COMPLETED       1.000E-04,  TOTAL TIME COMPLETED        1.000E-04
+
+
+  INCREMENT     2 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-04
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.417       TIME AVG. FORCE       0.287    
+ LARGEST SCALED RESIDUAL FORCE      1.178E-10   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      1.178E-10
+ LARGEST INCREMENT OF DISP.         1.000E-05   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -3.471E-11   AT NODE         17   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE HEAT FLUX                  1.462E+13   TIME AVG. HEAT FLUX   1.284E+13
+ LARGEST RESIDUAL HEAT FLUX        -2.957E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+09   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        5.152E+06   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -7.417E+08
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-04,  FRACTION OF STEP COMPLETED  2.000E-04
+ STEP TIME COMPLETED       2.000E-04,  TOTAL TIME COMPLETED        2.000E-04
+
+
+  INCREMENT     3 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-04
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      0.625       TIME AVG. FORCE       0.400    
+ LARGEST SCALED RESIDUAL FORCE      2.147E-10   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      2.147E-10
+ LARGEST INCREMENT OF DISP.         1.000E-05   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        3.471E-11   AT NODE          1   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE HEAT FLUX                  1.450E+13   TIME AVG. HEAT FLUX   1.339E+13
+ LARGEST RESIDUAL HEAT FLUX        -2.886E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+09   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        5.062E+06   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -7.367E+08
+          TIME INCREMENT MAY NOW INCREASE TO    2.000E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-04,  FRACTION OF STEP COMPLETED  3.000E-04
+ STEP TIME COMPLETED       3.000E-04,  TOTAL TIME COMPLETED        3.000E-04
+
+
+  INCREMENT     4 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.000E-04
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       1.04       TIME AVG. FORCE       0.560    
+ LARGEST SCALED RESIDUAL FORCE      9.969E-10   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      9.969E-10
+ LARGEST INCREMENT OF DISP.         2.000E-05   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        1.043E-10   AT NODE          1   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE HEAT FLUX                  1.425E+13   TIME AVG. HEAT FLUX   1.361E+13
+ LARGEST RESIDUAL HEAT FLUX        -1.111E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         5.265E+09   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.975E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -1.454E+09
+          TIME INCREMENT MAY NOW INCREASE TO    4.000E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.000E-04,  FRACTION OF STEP COMPLETED  5.000E-04
+ STEP TIME COMPLETED       5.000E-04,  TOTAL TIME COMPLETED        5.000E-04
+
+
+  INCREMENT     5 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.000E-04
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       1.88       TIME AVG. FORCE       0.823    
+ LARGEST SCALED RESIDUAL FORCE      6.827E-09   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      6.827E-09
+ LARGEST INCREMENT OF DISP.         4.000E-05   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -4.171E-10   AT NODE         17   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+ AVERAGE HEAT FLUX                  1.034E+13   TIME AVG. HEAT FLUX   1.295E+13
+ LARGEST RESIDUAL HEAT FLUX        -4.112E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         1.053E+10   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        7.511E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -2.832E+09
+          TIME INCREMENT MAY NOW INCREASE TO    8.000E-04
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  4.000E-04,  FRACTION OF STEP COMPLETED  9.000E-04
+ STEP TIME COMPLETED       9.000E-04,  TOTAL TIME COMPLETED        9.000E-04
+
+
+  INCREMENT     6 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.000E-04
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       3.54       TIME AVG. FORCE        1.28    
+ LARGEST SCALED RESIDUAL FORCE      5.002E-08   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      5.002E-08
+ LARGEST INCREMENT OF DISP.         8.000E-05   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        1.668E-09   AT NODE          1   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.702E+12   TIME AVG. HEAT FLUX   1.241E+13
+ LARGEST RESIDUAL HEAT FLUX        -1.417E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.106E+10   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.727E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ ESTIMATE OF TEMP.    CORRECTION   -2.318E+06
+ HEAT FLUX EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -5.391E+09
+          TIME INCREMENT MAY NOW INCREASE TO    1.600E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  8.000E-04,  FRACTION OF STEP COMPLETED  1.700E-03
+ STEP TIME COMPLETED       1.700E-03,  TOTAL TIME COMPLETED        1.700E-03
+
+
+  INCREMENT     7 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.600E-03
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       6.88       TIME AVG. FORCE        2.08    
+ LARGEST SCALED RESIDUAL FORCE      3.818E-07   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.818E-07
+ LARGEST INCREMENT OF DISP.         1.600E-04   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -6.671E-09   AT NODE         17   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.651E+12   TIME AVG. HEAT FLUX   1.187E+13
+ LARGEST RESIDUAL HEAT FLUX        -4.309E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         4.212E+10   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        9.114E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ ESTIMATE OF TEMP.    CORRECTION   -1.383E+07
+ HEAT FLUX EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -9.871E+09
+          TIME INCREMENT MAY NOW INCREASE TO    3.200E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.600E-03,  FRACTION OF STEP COMPLETED  3.300E-03
+ STEP TIME COMPLETED       3.300E-03,  TOTAL TIME COMPLETED        3.300E-03
+
+
+  INCREMENT     8 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.200E-03
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       13.5       TIME AVG. FORCE        3.51    
+ LARGEST SCALED RESIDUAL FORCE      2.980E-06   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      2.980E-06
+ LARGEST INCREMENT OF DISP.         3.200E-04   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        2.667E-08   AT NODE          1   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.162E+12   TIME AVG. HEAT FLUX   1.129E+13
+ LARGEST RESIDUAL HEAT FLUX        -1.093E+11   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         8.424E+10   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.679E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                       13.5       TIME AVG. FORCE        3.51    
+ LARGEST SCALED RESIDUAL FORCE     -1.851E-09   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE     -1.851E-09
+ LARGEST INCREMENT OF DISP.         3.200E-04   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        7.940E-12   AT NODE         20   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.543E+12   TIME AVG. HEAT FLUX   1.158E+13
+ LARGEST RESIDUAL HEAT FLUX         3.032E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         8.424E+10   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.       -5.339E+07   AT NODE          3   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -1.712E+10
+          TIME INCREMENT MAY NOW INCREASE TO    4.800E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  3.200E-03,  FRACTION OF STEP COMPLETED  6.500E-03
+ STEP TIME COMPLETED       6.500E-03,  TOTAL TIME COMPLETED        6.500E-03
+
+
+  INCREMENT     9 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.800E-03
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       23.5       TIME AVG. FORCE        5.73    
+ LARGEST SCALED RESIDUAL FORCE      1.401E-05   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      1.401E-05
+ LARGEST INCREMENT OF DISP.         4.800E-04   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -6.654E-08   AT NODE         17   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  5.806E+12   TIME AVG. HEAT FLUX   1.094E+13
+ LARGEST RESIDUAL HEAT FLUX        -1.487E+11   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         1.264E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.094E+09   AT NODE          3   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                       23.5       TIME AVG. FORCE        5.73    
+ LARGEST SCALED RESIDUAL FORCE     -1.501E-08   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE     -1.501E-08
+ LARGEST INCREMENT OF DISP.         4.800E-04   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        3.483E-11   AT NODE          4   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  5.803E+12   TIME AVG. HEAT FLUX   1.094E+13
+ LARGEST RESIDUAL HEAT FLUX         5.568E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         1.264E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.       -1.014E+08   AT NODE          3   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -2.168E+10
+          TIME INCREMENT MAY NOW INCREASE TO    7.200E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  4.800E-03,  FRACTION OF STEP COMPLETED  1.130E-02
+ STEP TIME COMPLETED       1.130E-02,  TOTAL TIME COMPLETED        1.130E-02
+
+
+  INCREMENT    10 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.200E-03
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       38.5       TIME AVG. FORCE        9.01    
+ LARGEST SCALED RESIDUAL FORCE      5.367E-05   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      5.367E-05
+ LARGEST INCREMENT OF DISP.         7.200E-04   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        1.495E-07   AT NODE          1   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  4.672E+12   TIME AVG. HEAT FLUX   1.031E+13
+ LARGEST RESIDUAL HEAT FLUX        -2.161E+11   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         1.895E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        6.164E+09   AT NODE          3   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                       38.5       TIME AVG. FORCE        9.01    
+ LARGEST SCALED RESIDUAL FORCE     -9.386E-08   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE     -9.386E-08
+ LARGEST INCREMENT OF DISP.         7.200E-04   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        1.293E-10   AT NODE          4   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  4.671E+12   TIME AVG. HEAT FLUX   1.031E+13
+ LARGEST RESIDUAL HEAT FLUX         1.144E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         1.895E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.       -2.078E+08   AT NODE         19   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -2.657E+10
+          TIME INCREMENT MAY NOW INCREASE TO    1.000E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  7.200E-03,  FRACTION OF STEP COMPLETED  1.850E-02
+ STEP TIME COMPLETED       1.850E-02,  TOTAL TIME COMPLETED        1.850E-02
+
+
+  INCREMENT    11 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       59.3       TIME AVG. FORCE        13.6    
+ LARGEST SCALED RESIDUAL FORCE      1.714E-04   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      1.714E-04
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.967E-07   AT NODE         17   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  3.785E+12   TIME AVG. HEAT FLUX   9.721E+12
+ LARGEST RESIDUAL HEAT FLUX        -3.003E+11   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        8.226E+09   AT NODE         19   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                       59.3       TIME AVG. FORCE        13.6    
+ LARGEST SCALED RESIDUAL FORCE     -4.598E-07   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE     -4.598E-07
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        3.985E-10   AT NODE         20   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  3.791E+12   TIME AVG. HEAT FLUX   9.721E+12
+ LARGEST RESIDUAL HEAT FLUX         2.141E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.       -3.860E+08   AT NODE          3   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -2.906E+10
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  2.850E-02
+ STEP TIME COMPLETED       2.850E-02,  TOTAL TIME COMPLETED        2.850E-02
+
+
+  INCREMENT    12 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       48.1       TIME AVG. FORCE        16.5    
+ LARGEST SCALED RESIDUAL FORCE       3.22       AT NODE         20   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE       3.22    
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -5.526E-04   AT NODE          1   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+ AVERAGE HEAT FLUX                  3.213E+12   TIME AVG. HEAT FLUX   9.179E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.247E+11   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        5.976E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                       47.3       TIME AVG. FORCE        16.4    
+ LARGEST SCALED RESIDUAL FORCE      2.756E-02   AT NODE         11   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      2.756E-02
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        3.234E-05   AT NODE         14   DOF  2
+   INSTANCE: PART-1-1                                                                        
+ ESTIMATE OF DISP.    CORRECTION    2.765E-07
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE HEAT FLUX                  3.221E+12   TIME AVG. HEAT FLUX   9.179E+12
+ LARGEST RESIDUAL HEAT FLUX         1.568E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.       -2.781E+08   AT NODE         19   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -2.337E+10
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  3.850E-02
+ STEP TIME COMPLETED       3.850E-02,  TOTAL TIME COMPLETED        3.850E-02
+
+
+  INCREMENT    13 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       50.1       TIME AVG. FORCE        19.0    
+ LARGEST SCALED RESIDUAL FORCE      3.852E-02   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.852E-02
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        5.717E-05   AT NODE         19   DOF  2
+   INSTANCE: PART-1-1                                                                        
+ ESTIMATE OF DISP.    CORRECTION   -3.681E-07
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE HEAT FLUX                  2.786E+12   TIME AVG. HEAT FLUX   8.688E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.689E+11   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.493E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                       64.7       TIME AVG. FORCE        20.1    
+ LARGEST SCALED RESIDUAL FORCE      9.576E-05   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      9.576E-05
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.684E-07   AT NODE          3   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  2.794E+12   TIME AVG. HEAT FLUX   8.688E+12
+ LARGEST RESIDUAL HEAT FLUX         1.119E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.       -1.994E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -1.907E+10
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  4.850E-02
+ STEP TIME COMPLETED       4.850E-02,  TOTAL TIME COMPLETED        4.850E-02
+
+
+  INCREMENT    14 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       52.6       TIME AVG. FORCE        22.4    
+ LARGEST SCALED RESIDUAL FORCE     -1.247E-02   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE     -1.247E-02
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -1.512E-05   AT NODE          4   DOF  2
+   INSTANCE: PART-1-1                                                                        
+ ESTIMATE OF DISP.    CORRECTION    7.088E-08
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE HEAT FLUX                  2.449E+12   TIME AVG. HEAT FLUX   8.243E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.247E+11   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.414E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                       65.7       TIME AVG. FORCE        23.4    
+ LARGEST SCALED RESIDUAL FORCE      4.268E-05   AT NODE         12   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      4.268E-05
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        7.705E-08   AT NODE         14   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  2.455E+12   TIME AVG. HEAT FLUX   8.243E+12
+ LARGEST RESIDUAL HEAT FLUX         7.529E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.       -1.398E+08   AT NODE         19   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS  -1.580E+10
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  5.850E-02
+ STEP TIME COMPLETED       5.850E-02,  TOTAL TIME COMPLETED        5.850E-02
+
+
+  INCREMENT    15 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       55.0       TIME AVG. FORCE        25.5    
+ LARGEST SCALED RESIDUAL FORCE      7.155E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      7.155E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        2.293E-05   AT NODE         17   DOF  2
+   INSTANCE: PART-1-1                                                                        
+ ESTIMATE OF DISP.    CORRECTION    1.432E-07
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE HEAT FLUX                  2.176E+12   TIME AVG. HEAT FLUX   7.839E+12
+ LARGEST RESIDUAL HEAT FLUX        -9.137E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.610E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                       66.5       TIME AVG. FORCE        26.2    
+ LARGEST SCALED RESIDUAL FORCE     -2.074E-05   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE     -2.074E-05
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -5.805E-08   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  2.181E+12   TIME AVG. HEAT FLUX   7.839E+12
+ LARGEST RESIDUAL HEAT FLUX         5.081E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.       -9.778E+07   AT NODE         19   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   1.386E+10
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  6.850E-02
+ STEP TIME COMPLETED       6.850E-02,  TOTAL TIME COMPLETED        6.850E-02
+
+
+  INCREMENT    16 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       57.5       TIME AVG. FORCE        28.2    
+ LARGEST SCALED RESIDUAL FORCE      5.668E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      5.668E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -1.403E-05   AT NODE          1   DOF  2
+   INSTANCE: PART-1-1                                                                        
+ ESTIMATE OF DISP.    CORRECTION   -1.155E-07
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+ AVERAGE HEAT FLUX                  1.953E+12   TIME AVG. HEAT FLUX   7.471E+12
+ LARGEST RESIDUAL HEAT FLUX        -6.693E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.013E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                       67.1       TIME AVG. FORCE        28.8    
+ LARGEST SCALED RESIDUAL FORCE     -2.362E-05   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE     -2.362E-05
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -4.124E-08   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.957E+12   TIME AVG. HEAT FLUX   7.471E+12
+ LARGEST RESIDUAL HEAT FLUX         3.404E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.       -6.826E+07   AT NODE         19   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   1.259E+10
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  7.850E-02
+ STEP TIME COMPLETED       7.850E-02,  TOTAL TIME COMPLETED        7.850E-02
+
+
+  INCREMENT    17 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       65.0       TIME AVG. FORCE        30.9    
+ LARGEST SCALED RESIDUAL FORCE      5.113E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      5.113E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        9.188E-06   AT NODE         17   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.771E+12   TIME AVG. HEAT FLUX   7.136E+12
+ LARGEST RESIDUAL HEAT FLUX        -4.932E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.570E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                       67.7       TIME AVG. FORCE        31.1    
+ LARGEST SCALED RESIDUAL FORCE     -2.718E-05   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE     -2.718E-05
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        5.026E-08   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.774E+12   TIME AVG. HEAT FLUX   7.136E+12
+ LARGEST RESIDUAL HEAT FLUX         2.290E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.       -4.806E+07   AT NODE          3   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   1.152E+10
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  8.850E-02
+ STEP TIME COMPLETED       8.850E-02,  TOTAL TIME COMPLETED        8.850E-02
+
+
+  INCREMENT    18 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       65.4       TIME AVG. FORCE        33.0    
+ LARGEST SCALED RESIDUAL FORCE      4.779E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      4.779E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -6.352E-06   AT NODE          1   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.620E+12   TIME AVG. HEAT FLUX   6.830E+12
+ LARGEST RESIDUAL HEAT FLUX        -3.673E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.239E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          HEAT FLUX EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                       68.1       TIME AVG. FORCE        33.1    
+ LARGEST SCALED RESIDUAL FORCE     -2.954E-05   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE     -2.954E-05
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        5.714E-08   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.623E+12   TIME AVG. HEAT FLUX   6.830E+12
+ LARGEST RESIDUAL HEAT FLUX         1.557E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.       -3.430E+07   AT NODE          3   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   1.062E+10
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  9.850E-02
+ STEP TIME COMPLETED       9.850E-02,  TOTAL TIME COMPLETED        9.850E-02
+
+
+  INCREMENT    19 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       65.8       TIME AVG. FORCE        34.9    
+ LARGEST SCALED RESIDUAL FORCE      4.511E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      4.511E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        4.571E-06   AT NODE         17   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.496E+12   TIME AVG. HEAT FLUX   6.549E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.771E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        9.891E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   9.876E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.108    
+ STEP TIME COMPLETED       0.108    ,  TOTAL TIME COMPLETED        0.108    
+
+
+  INCREMENT    20 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       66.2       TIME AVG. FORCE        36.4    
+ LARGEST SCALED RESIDUAL FORCE      4.226E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      4.226E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        3.302E-06   AT NODE         17   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.392E+12   TIME AVG. HEAT FLUX   6.291E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.008E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        7.726E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   9.225E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.118    
+ STEP TIME COMPLETED       0.118    ,  TOTAL TIME COMPLETED        0.118    
+
+
+  INCREMENT    21 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       66.5       TIME AVG. FORCE        37.9    
+ LARGEST SCALED RESIDUAL FORCE      4.061E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      4.061E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.732E-06   AT NODE         19   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.304E+12   TIME AVG. HEAT FLUX   6.054E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.571E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        6.356E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   8.671E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.128    
+ STEP TIME COMPLETED       0.128    ,  TOTAL TIME COMPLETED        0.128    
+
+
+  INCREMENT    22 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       66.9       TIME AVG. FORCE        39.2    
+ LARGEST SCALED RESIDUAL FORCE      3.906E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.906E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.760E-06   AT NODE         19   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.230E+12   TIME AVG. HEAT FLUX   5.835E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.241E+10   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        5.267E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   8.199E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.138    
+ STEP TIME COMPLETED       0.138    ,  TOTAL TIME COMPLETED        0.138    
+
+
+  INCREMENT    23 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       67.2       TIME AVG. FORCE        40.4    
+ LARGEST SCALED RESIDUAL FORCE      3.784E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.784E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.767E-06   AT NODE          3   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.167E+12   TIME AVG. HEAT FLUX   5.632E+12
+ LARGEST RESIDUAL HEAT FLUX        -9.938E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.408E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   7.795E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.148    
+ STEP TIME COMPLETED       0.148    ,  TOTAL TIME COMPLETED        0.148    
+
+
+  INCREMENT    24 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       67.5       TIME AVG. FORCE        41.5    
+ LARGEST SCALED RESIDUAL FORCE      3.688E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.688E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.763E-06   AT NODE         19   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.113E+12   TIME AVG. HEAT FLUX   5.443E+12
+ LARGEST RESIDUAL HEAT FLUX        -8.055E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.722E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   7.449E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.159    
+ STEP TIME COMPLETED       0.159    ,  TOTAL TIME COMPLETED        0.159    
+
+
+  INCREMENT    25 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       67.8       TIME AVG. FORCE        42.6    
+ LARGEST SCALED RESIDUAL FORCE      3.613E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.613E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.753E-06   AT NODE          3   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.066E+12   TIME AVG. HEAT FLUX   5.268E+12
+ LARGEST RESIDUAL HEAT FLUX        -6.606E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.169E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   7.150E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.169    
+ STEP TIME COMPLETED       0.169    ,  TOTAL TIME COMPLETED        0.169    
+
+
+  INCREMENT    26 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       68.1       TIME AVG. FORCE        43.6    
+ LARGEST SCALED RESIDUAL FORCE      3.555E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.555E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.739E-06   AT NODE         19   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  1.026E+12   TIME AVG. HEAT FLUX   5.105E+12
+ LARGEST RESIDUAL HEAT FLUX        -5.477E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.719E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.891E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.179    
+ STEP TIME COMPLETED       0.179    ,  TOTAL TIME COMPLETED        0.179    
+
+
+  INCREMENT    27 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       68.4       TIME AVG. FORCE        44.5    
+ LARGEST SCALED RESIDUAL FORCE      3.510E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.510E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.725E-06   AT NODE          3   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.905E+11   TIME AVG. HEAT FLUX   4.953E+12
+ LARGEST RESIDUAL HEAT FLUX        -4.587E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.349E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.667E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.189    
+ STEP TIME COMPLETED       0.189    ,  TOTAL TIME COMPLETED        0.189    
+
+
+  INCREMENT    28 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       68.7       TIME AVG. FORCE        45.3    
+ LARGEST SCALED RESIDUAL FORCE      3.475E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.475E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.710E-06   AT NODE         19   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.595E+11   TIME AVG. HEAT FLUX   4.810E+12
+ LARGEST RESIDUAL HEAT FLUX        -3.879E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.043E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.472E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.199    
+ STEP TIME COMPLETED       0.199    ,  TOTAL TIME COMPLETED        0.199    
+
+
+  INCREMENT    29 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       71.8       TIME AVG. FORCE        46.3    
+ LARGEST SCALED RESIDUAL FORCE      3.447E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.447E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.695E-06   AT NODE          3   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.322E+11   TIME AVG. HEAT FLUX   4.676E+12
+ LARGEST RESIDUAL HEAT FLUX        -3.309E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.788E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.303E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.209    
+ STEP TIME COMPLETED       0.209    ,  TOTAL TIME COMPLETED        0.209    
+
+
+  INCREMENT    30 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       72.0       TIME AVG. FORCE        47.1    
+ LARGEST SCALED RESIDUAL FORCE      3.425E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.425E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.683E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.080E+11   TIME AVG. HEAT FLUX   4.551E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.846E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.574E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.155E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.219    
+ STEP TIME COMPLETED       0.219    ,  TOTAL TIME COMPLETED        0.219    
+
+
+  INCREMENT    31 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       72.3       TIME AVG. FORCE        47.9    
+ LARGEST SCALED RESIDUAL FORCE      3.406E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.406E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.698E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.865E+11   TIME AVG. HEAT FLUX   4.433E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.468E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.392E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.025E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.229    
+ STEP TIME COMPLETED       0.229    ,  TOTAL TIME COMPLETED        0.229    
+
+
+  INCREMENT    32 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       72.5       TIME AVG. FORCE        48.7    
+ LARGEST SCALED RESIDUAL FORCE      3.391E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.391E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.709E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.673E+11   TIME AVG. HEAT FLUX   4.321E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.154E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.237E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.913E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.239    
+ STEP TIME COMPLETED       0.239    ,  TOTAL TIME COMPLETED        0.239    
+
+
+  INCREMENT    33 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       72.7       TIME AVG. FORCE        49.4    
+ LARGEST SCALED RESIDUAL FORCE      3.378E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.378E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.719E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.500E+11   TIME AVG. HEAT FLUX   4.216E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.894E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.105E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.814E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.249    
+ STEP TIME COMPLETED       0.249    ,  TOTAL TIME COMPLETED        0.249    
+
+
+  INCREMENT    34 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       72.9       TIME AVG. FORCE        50.1    
+ LARGEST SCALED RESIDUAL FORCE      3.367E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.367E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.726E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.345E+11   TIME AVG. HEAT FLUX   4.116E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.675E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        9.904E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.728E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.259    
+ STEP TIME COMPLETED       0.259    ,  TOTAL TIME COMPLETED        0.259    
+
+
+  INCREMENT    35 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       73.1       TIME AVG. FORCE        50.8    
+ LARGEST SCALED RESIDUAL FORCE      3.358E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.358E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.732E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.205E+11   TIME AVG. HEAT FLUX   4.022E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.491E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        8.914E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.653E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.269    
+ STEP TIME COMPLETED       0.269    ,  TOTAL TIME COMPLETED        0.269    
+
+
+  INCREMENT    36 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       73.3       TIME AVG. FORCE        51.4    
+ LARGEST SCALED RESIDUAL FORCE      3.349E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.349E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.736E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.078E+11   TIME AVG. HEAT FLUX   3.933E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.334E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        8.051E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.587E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.279    
+ STEP TIME COMPLETED       0.279    ,  TOTAL TIME COMPLETED        0.279    
+
+
+  INCREMENT    37 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       73.5       TIME AVG. FORCE        52.0    
+ LARGEST SCALED RESIDUAL FORCE      3.342E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.342E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.739E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.962E+11   TIME AVG. HEAT FLUX   3.848E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.199E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        7.296E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.531E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.289    
+ STEP TIME COMPLETED       0.289    ,  TOTAL TIME COMPLETED        0.289    
+
+
+  INCREMENT    38 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       73.7       TIME AVG. FORCE        52.6    
+ LARGEST SCALED RESIDUAL FORCE      3.335E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.335E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.740E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.856E+11   TIME AVG. HEAT FLUX   3.768E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.084E+09   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        6.632E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.482E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.299    
+ STEP TIME COMPLETED       0.299    ,  TOTAL TIME COMPLETED        0.299    
+
+
+  INCREMENT    39 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       73.9       TIME AVG. FORCE        53.1    
+ LARGEST SCALED RESIDUAL FORCE      3.328E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.328E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.741E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.760E+11   TIME AVG. HEAT FLUX   3.691E+12
+ LARGEST RESIDUAL HEAT FLUX        -9.838E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        6.046E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.440E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.309    
+ STEP TIME COMPLETED       0.309    ,  TOTAL TIME COMPLETED        0.309    
+
+
+  INCREMENT    40 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       74.0       TIME AVG. FORCE        53.6    
+ LARGEST SCALED RESIDUAL FORCE      3.322E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.322E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.742E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.671E+11   TIME AVG. HEAT FLUX   3.618E+12
+ LARGEST RESIDUAL HEAT FLUX        -8.970E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        5.527E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.404E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.319    
+ STEP TIME COMPLETED       0.319    ,  TOTAL TIME COMPLETED        0.319    
+
+
+  INCREMENT    41 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       74.2       TIME AVG. FORCE        54.1    
+ LARGEST SCALED RESIDUAL FORCE      3.317E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.317E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.741E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.590E+11   TIME AVG. HEAT FLUX   3.548E+12
+ LARGEST RESIDUAL HEAT FLUX        -8.211E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        5.064E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.374E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.329    
+ STEP TIME COMPLETED       0.329    ,  TOTAL TIME COMPLETED        0.329    
+
+
+  INCREMENT    42 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       74.4       TIME AVG. FORCE        54.6    
+ LARGEST SCALED RESIDUAL FORCE      3.311E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.311E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.740E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.515E+11   TIME AVG. HEAT FLUX   3.482E+12
+ LARGEST RESIDUAL HEAT FLUX        -7.546E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.651E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.349E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.339    
+ STEP TIME COMPLETED       0.339    ,  TOTAL TIME COMPLETED        0.339    
+
+
+  INCREMENT    43 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       74.5       TIME AVG. FORCE        55.1    
+ LARGEST SCALED RESIDUAL FORCE      3.306E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.306E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.739E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.445E+11   TIME AVG. HEAT FLUX   3.418E+12
+ LARGEST RESIDUAL HEAT FLUX        -6.959E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.281E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.329E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.349    
+ STEP TIME COMPLETED       0.349    ,  TOTAL TIME COMPLETED        0.349    
+
+
+  INCREMENT    44 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       74.7       TIME AVG. FORCE        55.5    
+ LARGEST SCALED RESIDUAL FORCE      3.301E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.301E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.737E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.381E+11   TIME AVG. HEAT FLUX   3.357E+12
+ LARGEST RESIDUAL HEAT FLUX        -6.441E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.948E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.312E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.359    
+ STEP TIME COMPLETED       0.359    ,  TOTAL TIME COMPLETED        0.359    
+
+
+  INCREMENT    45 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       74.8       TIME AVG. FORCE        56.0    
+ LARGEST SCALED RESIDUAL FORCE      3.297E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.297E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.735E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.322E+11   TIME AVG. HEAT FLUX   3.299E+12
+ LARGEST RESIDUAL HEAT FLUX        -5.980E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.647E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.300E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.369    
+ STEP TIME COMPLETED       0.369    ,  TOTAL TIME COMPLETED        0.369    
+
+
+  INCREMENT    46 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       75.0       TIME AVG. FORCE        56.4    
+ LARGEST SCALED RESIDUAL FORCE      3.292E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.292E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.732E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.266E+11   TIME AVG. HEAT FLUX   3.243E+12
+ LARGEST RESIDUAL HEAT FLUX        -5.570E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.375E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.291E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.379    
+ STEP TIME COMPLETED       0.379    ,  TOTAL TIME COMPLETED        0.379    
+
+
+  INCREMENT    47 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       75.1       TIME AVG. FORCE        56.8    
+ LARGEST SCALED RESIDUAL FORCE      3.288E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.288E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.729E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.214E+11   TIME AVG. HEAT FLUX   3.189E+12
+ LARGEST RESIDUAL HEAT FLUX        -5.204E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.128E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.286E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.389    
+ STEP TIME COMPLETED       0.389    ,  TOTAL TIME COMPLETED        0.389    
+
+
+  INCREMENT    48 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       75.3       TIME AVG. FORCE        57.2    
+ LARGEST SCALED RESIDUAL FORCE      3.284E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.284E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.726E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.166E+11   TIME AVG. HEAT FLUX   3.138E+12
+ LARGEST RESIDUAL HEAT FLUX        -4.876E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.904E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.283E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.399    
+ STEP TIME COMPLETED       0.399    ,  TOTAL TIME COMPLETED        0.399    
+
+
+  INCREMENT    49 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       75.4       TIME AVG. FORCE        57.5    
+ LARGEST SCALED RESIDUAL FORCE      3.280E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.280E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.723E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.121E+11   TIME AVG. HEAT FLUX   3.088E+12
+ LARGEST RESIDUAL HEAT FLUX        -4.581E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.699E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.283E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.409    
+ STEP TIME COMPLETED       0.409    ,  TOTAL TIME COMPLETED        0.409    
+
+
+  INCREMENT    50 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       75.5       TIME AVG. FORCE        57.9    
+ LARGEST SCALED RESIDUAL FORCE      3.276E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.276E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.719E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  7.079E+11   TIME AVG. HEAT FLUX   3.040E+12
+ LARGEST RESIDUAL HEAT FLUX        -4.315E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.511E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.286E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.419    
+ STEP TIME COMPLETED       0.419    ,  TOTAL TIME COMPLETED        0.419    
+
+
+  INCREMENT    51 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       75.7       TIME AVG. FORCE        58.2    
+ LARGEST SCALED RESIDUAL FORCE      3.272E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.272E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.716E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.044E+11   TIME AVG. HEAT FLUX   2.997E+12
+ LARGEST RESIDUAL HEAT FLUX        -4.074E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.339E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.291E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.429    
+ STEP TIME COMPLETED       0.429    ,  TOTAL TIME COMPLETED        0.429    
+
+
+  INCREMENT    52 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       75.8       TIME AVG. FORCE        58.6    
+ LARGEST SCALED RESIDUAL FORCE      3.269E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.269E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.712E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.335E+11   TIME AVG. HEAT FLUX   2.957E+12
+ LARGEST RESIDUAL HEAT FLUX        -3.857E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.181E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.298E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.439    
+ STEP TIME COMPLETED       0.439    ,  TOTAL TIME COMPLETED        0.439    
+
+
+  INCREMENT    53 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       76.0       TIME AVG. FORCE        58.9    
+ LARGEST SCALED RESIDUAL FORCE      3.265E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.265E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.708E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.288E+11   TIME AVG. HEAT FLUX   2.919E+12
+ LARGEST RESIDUAL HEAT FLUX        -3.660E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.036E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.307E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.449    
+ STEP TIME COMPLETED       0.449    ,  TOTAL TIME COMPLETED        0.449    
+
+
+  INCREMENT    54 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       76.1       TIME AVG. FORCE        59.2    
+ LARGEST SCALED RESIDUAL FORCE      3.262E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.262E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.704E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.244E+11   TIME AVG. HEAT FLUX   2.882E+12
+ LARGEST RESIDUAL HEAT FLUX        -3.481E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.901E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.318E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.459    
+ STEP TIME COMPLETED       0.459    ,  TOTAL TIME COMPLETED        0.459    
+
+
+  INCREMENT    55 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       76.2       TIME AVG. FORCE        59.5    
+ LARGEST SCALED RESIDUAL FORCE      3.258E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.258E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.700E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.202E+11   TIME AVG. HEAT FLUX   2.846E+12
+ LARGEST RESIDUAL HEAT FLUX        -3.317E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.777E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.331E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.469    
+ STEP TIME COMPLETED       0.469    ,  TOTAL TIME COMPLETED        0.469    
+
+
+  INCREMENT    56 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       76.3       TIME AVG. FORCE        59.8    
+ LARGEST SCALED RESIDUAL FORCE      3.255E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.255E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.696E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.162E+11   TIME AVG. HEAT FLUX   2.812E+12
+ LARGEST RESIDUAL HEAT FLUX        -3.169E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.662E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.346E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.479    
+ STEP TIME COMPLETED       0.479    ,  TOTAL TIME COMPLETED        0.479    
+
+
+  INCREMENT    57 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       76.4       TIME AVG. FORCE        60.1    
+ LARGEST SCALED RESIDUAL FORCE      3.252E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.252E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.692E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.125E+11   TIME AVG. HEAT FLUX   2.778E+12
+ LARGEST RESIDUAL HEAT FLUX        -3.033E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.616E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.362E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.489    
+ STEP TIME COMPLETED       0.489    ,  TOTAL TIME COMPLETED        0.489    
+
+
+  INCREMENT    58 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       76.6       TIME AVG. FORCE        60.4    
+ LARGEST SCALED RESIDUAL FORCE      3.249E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.249E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.687E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.089E+11   TIME AVG. HEAT FLUX   2.746E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.909E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.764E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.380E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.499    
+ STEP TIME COMPLETED       0.499    ,  TOTAL TIME COMPLETED        0.499    
+
+
+  INCREMENT    59 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       76.7       TIME AVG. FORCE        60.7    
+ LARGEST SCALED RESIDUAL FORCE      3.246E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.246E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.683E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.055E+11   TIME AVG. HEAT FLUX   2.715E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.795E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.904E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.399E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.509    
+ STEP TIME COMPLETED       0.509    ,  TOTAL TIME COMPLETED        0.509    
+
+
+  INCREMENT    60 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       76.8       TIME AVG. FORCE        60.9    
+ LARGEST SCALED RESIDUAL FORCE      3.243E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.243E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.679E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  9.023E+11   TIME AVG. HEAT FLUX   2.685E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.691E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.037E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.419E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.519    
+ STEP TIME COMPLETED       0.519    ,  TOTAL TIME COMPLETED        0.519    
+
+
+  INCREMENT    61 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       76.9       TIME AVG. FORCE        61.2    
+ LARGEST SCALED RESIDUAL FORCE      3.241E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.241E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.675E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.992E+11   TIME AVG. HEAT FLUX   2.655E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.596E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.162E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.441E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.529    
+ STEP TIME COMPLETED       0.529    ,  TOTAL TIME COMPLETED        0.529    
+
+
+  INCREMENT    62 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       77.0       TIME AVG. FORCE        61.5    
+ LARGEST SCALED RESIDUAL FORCE      3.238E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.238E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.671E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.963E+11   TIME AVG. HEAT FLUX   2.627E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.509E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.281E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.463E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.539    
+ STEP TIME COMPLETED       0.539    ,  TOTAL TIME COMPLETED        0.539    
+
+
+  INCREMENT    63 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       77.1       TIME AVG. FORCE        61.7    
+ LARGEST SCALED RESIDUAL FORCE      3.236E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.236E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.666E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.935E+11   TIME AVG. HEAT FLUX   2.600E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.429E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.394E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.487E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.549    
+ STEP TIME COMPLETED       0.549    ,  TOTAL TIME COMPLETED        0.549    
+
+
+  INCREMENT    64 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       77.2       TIME AVG. FORCE        62.0    
+ LARGEST SCALED RESIDUAL FORCE      3.233E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.233E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.662E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.909E+11   TIME AVG. HEAT FLUX   2.573E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.356E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.501E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.512E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.559    
+ STEP TIME COMPLETED       0.559    ,  TOTAL TIME COMPLETED        0.559    
+
+
+  INCREMENT    65 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       77.3       TIME AVG. FORCE        62.2    
+ LARGEST SCALED RESIDUAL FORCE      3.231E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.231E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.658E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.883E+11   TIME AVG. HEAT FLUX   2.547E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.289E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.604E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.538E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.569    
+ STEP TIME COMPLETED       0.569    ,  TOTAL TIME COMPLETED        0.569    
+
+
+  INCREMENT    66 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       77.4       TIME AVG. FORCE        62.4    
+ LARGEST SCALED RESIDUAL FORCE      3.229E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.229E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.654E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.859E+11   TIME AVG. HEAT FLUX   2.522E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.227E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.701E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.565E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.579    
+ STEP TIME COMPLETED       0.579    ,  TOTAL TIME COMPLETED        0.579    
+
+
+  INCREMENT    67 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       77.5       TIME AVG. FORCE        62.6    
+ LARGEST SCALED RESIDUAL FORCE      3.227E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.227E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.650E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.835E+11   TIME AVG. HEAT FLUX   2.497E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.171E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.795E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.593E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.589    
+ STEP TIME COMPLETED       0.589    ,  TOTAL TIME COMPLETED        0.589    
+
+
+  INCREMENT    68 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       77.6       TIME AVG. FORCE        62.9    
+ LARGEST SCALED RESIDUAL FORCE      3.224E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.224E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.646E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.813E+11   TIME AVG. HEAT FLUX   2.474E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.120E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.884E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.622E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.599    
+ STEP TIME COMPLETED       0.599    ,  TOTAL TIME COMPLETED        0.599    
+
+
+  INCREMENT    69 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       77.7       TIME AVG. FORCE        63.1    
+ LARGEST SCALED RESIDUAL FORCE      3.223E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.223E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.642E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.791E+11   TIME AVG. HEAT FLUX   2.450E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.073E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        2.969E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.652E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.609    
+ STEP TIME COMPLETED       0.609    ,  TOTAL TIME COMPLETED        0.609    
+
+
+  INCREMENT    70 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       77.8       TIME AVG. FORCE        63.3    
+ LARGEST SCALED RESIDUAL FORCE      3.221E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.221E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.638E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.770E+11   TIME AVG. HEAT FLUX   2.428E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.030E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.051E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.682E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.619    
+ STEP TIME COMPLETED       0.619    ,  TOTAL TIME COMPLETED        0.619    
+
+
+  INCREMENT    71 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       77.8       TIME AVG. FORCE        63.5    
+ LARGEST SCALED RESIDUAL FORCE      3.219E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.219E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.634E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.750E+11   TIME AVG. HEAT FLUX   2.406E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.991E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.130E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.714E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.629    
+ STEP TIME COMPLETED       0.629    ,  TOTAL TIME COMPLETED        0.629    
+
+
+  INCREMENT    72 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       77.9       TIME AVG. FORCE        63.7    
+ LARGEST SCALED RESIDUAL FORCE      3.217E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.217E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.631E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.731E+11   TIME AVG. HEAT FLUX   2.385E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.956E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.205E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.746E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.639    
+ STEP TIME COMPLETED       0.639    ,  TOTAL TIME COMPLETED        0.639    
+
+
+  INCREMENT    73 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.0       TIME AVG. FORCE        63.9    
+ LARGEST SCALED RESIDUAL FORCE      3.216E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.216E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.627E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.712E+11   TIME AVG. HEAT FLUX   2.364E+12
+ LARGEST RESIDUAL HEAT FLUX        -1.924E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.278E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.779E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.649    
+ STEP TIME COMPLETED       0.649    ,  TOTAL TIME COMPLETED        0.649    
+
+
+  INCREMENT    74 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.1       TIME AVG. FORCE        64.1    
+ LARGEST SCALED RESIDUAL FORCE      2.657E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      2.657E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.        3.897E-06   AT NODE          6   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.695E+11   TIME AVG. HEAT FLUX   2.344E+12
+ LARGEST RESIDUAL HEAT FLUX        -3.556E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.331E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.812E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.659    
+ STEP TIME COMPLETED       0.659    ,  TOTAL TIME COMPLETED        0.659    
+
+
+  INCREMENT    75 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.1       TIME AVG. FORCE        64.3    
+ LARGEST SCALED RESIDUAL FORCE      3.067E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.067E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.571E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.679E+11   TIME AVG. HEAT FLUX   2.324E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.638E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.479E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.847E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.669    
+ STEP TIME COMPLETED       0.669    ,  TOTAL TIME COMPLETED        0.669    
+
+
+  INCREMENT    76 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.2       TIME AVG. FORCE        64.5    
+ LARGEST SCALED RESIDUAL FORCE      3.144E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.144E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.599E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.662E+11   TIME AVG. HEAT FLUX   2.305E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.439E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.501E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.882E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.679    
+ STEP TIME COMPLETED       0.679    ,  TOTAL TIME COMPLETED        0.679    
+
+
+  INCREMENT    77 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.3       TIME AVG. FORCE        64.6    
+ LARGEST SCALED RESIDUAL FORCE      3.144E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.144E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.592E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.646E+11   TIME AVG. HEAT FLUX   2.286E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.416E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.553E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.917E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.689    
+ STEP TIME COMPLETED       0.689    ,  TOTAL TIME COMPLETED        0.689    
+
+
+  INCREMENT    78 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.3       TIME AVG. FORCE        64.8    
+ LARGEST SCALED RESIDUAL FORCE      3.145E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.145E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.587E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.630E+11   TIME AVG. HEAT FLUX   2.268E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.388E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.613E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.953E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.699    
+ STEP TIME COMPLETED       0.699    ,  TOTAL TIME COMPLETED        0.699    
+
+
+  INCREMENT    79 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.4       TIME AVG. FORCE        65.0    
+ LARGEST SCALED RESIDUAL FORCE      3.145E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.145E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.582E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.615E+11   TIME AVG. HEAT FLUX   2.250E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.363E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.670E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   5.990E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.709    
+ STEP TIME COMPLETED       0.709    ,  TOTAL TIME COMPLETED        0.709    
+
+
+  INCREMENT    80 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.4       TIME AVG. FORCE        65.1    
+ LARGEST SCALED RESIDUAL FORCE      3.146E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.146E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.577E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.600E+11   TIME AVG. HEAT FLUX   2.233E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.340E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.725E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.027E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.719    
+ STEP TIME COMPLETED       0.719    ,  TOTAL TIME COMPLETED        0.719    
+
+
+  INCREMENT    81 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.5       TIME AVG. FORCE        65.3    
+ LARGEST SCALED RESIDUAL FORCE      3.146E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.146E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.573E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.586E+11   TIME AVG. HEAT FLUX   2.216E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.319E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.778E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.065E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.729    
+ STEP TIME COMPLETED       0.729    ,  TOTAL TIME COMPLETED        0.729    
+
+
+  INCREMENT    82 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.6       TIME AVG. FORCE        65.5    
+ LARGEST SCALED RESIDUAL FORCE      3.147E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.147E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.570E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.572E+11   TIME AVG. HEAT FLUX   2.199E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.300E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.829E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.103E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.739    
+ STEP TIME COMPLETED       0.739    ,  TOTAL TIME COMPLETED        0.739    
+
+
+  INCREMENT    83 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.6       TIME AVG. FORCE        65.6    
+ LARGEST SCALED RESIDUAL FORCE      3.147E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.147E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.566E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.559E+11   TIME AVG. HEAT FLUX   2.183E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.282E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.878E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.142E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.749    
+ STEP TIME COMPLETED       0.749    ,  TOTAL TIME COMPLETED        0.749    
+
+
+  INCREMENT    84 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.7       TIME AVG. FORCE        65.8    
+ LARGEST SCALED RESIDUAL FORCE      3.147E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.147E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.563E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.546E+11   TIME AVG. HEAT FLUX   2.167E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.266E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.926E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.181E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.759    
+ STEP TIME COMPLETED       0.759    ,  TOTAL TIME COMPLETED        0.759    
+
+
+  INCREMENT    85 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.7       TIME AVG. FORCE        65.9    
+ LARGEST SCALED RESIDUAL FORCE      3.148E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.148E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.560E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.533E+11   TIME AVG. HEAT FLUX   2.152E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.252E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        3.971E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.221E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.769    
+ STEP TIME COMPLETED       0.769    ,  TOTAL TIME COMPLETED        0.769    
+
+
+  INCREMENT    86 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.7       TIME AVG. FORCE        66.1    
+ LARGEST SCALED RESIDUAL FORCE      3.148E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.148E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.557E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.520E+11   TIME AVG. HEAT FLUX   2.137E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.239E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.015E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.261E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.779    
+ STEP TIME COMPLETED       0.779    ,  TOTAL TIME COMPLETED        0.779    
+
+
+  INCREMENT    87 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.8       TIME AVG. FORCE        66.2    
+ LARGEST SCALED RESIDUAL FORCE      3.149E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.149E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.554E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.508E+11   TIME AVG. HEAT FLUX   2.122E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.228E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.056E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.302E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.789    
+ STEP TIME COMPLETED       0.789    ,  TOTAL TIME COMPLETED        0.789    
+
+
+  INCREMENT    88 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.8       TIME AVG. FORCE        66.4    
+ LARGEST SCALED RESIDUAL FORCE      3.149E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.149E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.552E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.496E+11   TIME AVG. HEAT FLUX   2.107E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.218E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.096E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.343E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.799    
+ STEP TIME COMPLETED       0.799    ,  TOTAL TIME COMPLETED        0.799    
+
+
+  INCREMENT    89 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.9       TIME AVG. FORCE        66.5    
+ LARGEST SCALED RESIDUAL FORCE      3.150E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.150E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.549E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.485E+11   TIME AVG. HEAT FLUX   2.093E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.209E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.135E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.384E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.809    
+ STEP TIME COMPLETED       0.809    ,  TOTAL TIME COMPLETED        0.809    
+
+
+  INCREMENT    90 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.9       TIME AVG. FORCE        66.7    
+ LARGEST SCALED RESIDUAL FORCE      3.151E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.151E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.547E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.474E+11   TIME AVG. HEAT FLUX   2.079E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.201E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.171E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.426E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.819    
+ STEP TIME COMPLETED       0.819    ,  TOTAL TIME COMPLETED        0.819    
+
+
+  INCREMENT    91 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       78.9       TIME AVG. FORCE        66.8    
+ LARGEST SCALED RESIDUAL FORCE      3.152E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.152E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.545E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.463E+11   TIME AVG. HEAT FLUX   2.066E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.195E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.207E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.468E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.829    
+ STEP TIME COMPLETED       0.829    ,  TOTAL TIME COMPLETED        0.829    
+
+
+  INCREMENT    92 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.0       TIME AVG. FORCE        66.9    
+ LARGEST SCALED RESIDUAL FORCE      3.153E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.153E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.543E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.452E+11   TIME AVG. HEAT FLUX   2.053E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.190E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.240E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.510E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.839    
+ STEP TIME COMPLETED       0.839    ,  TOTAL TIME COMPLETED        0.839    
+
+
+  INCREMENT    93 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.0       TIME AVG. FORCE        67.1    
+ LARGEST SCALED RESIDUAL FORCE      3.153E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.153E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.541E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.441E+11   TIME AVG. HEAT FLUX   2.040E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.186E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.272E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.553E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.849    
+ STEP TIME COMPLETED       0.849    ,  TOTAL TIME COMPLETED        0.849    
+
+
+  INCREMENT    94 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.1       TIME AVG. FORCE        67.2    
+ LARGEST SCALED RESIDUAL FORCE      3.155E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.155E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.540E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.431E+11   TIME AVG. HEAT FLUX   2.027E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.183E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.302E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.596E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.859    
+ STEP TIME COMPLETED       0.859    ,  TOTAL TIME COMPLETED        0.859    
+
+
+  INCREMENT    95 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.1       TIME AVG. FORCE        67.3    
+ LARGEST SCALED RESIDUAL FORCE      3.156E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.156E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.538E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.421E+11   TIME AVG. HEAT FLUX   2.014E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.182E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.331E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.639E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.869    
+ STEP TIME COMPLETED       0.869    ,  TOTAL TIME COMPLETED        0.869    
+
+
+  INCREMENT    96 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.2       TIME AVG. FORCE        67.4    
+ LARGEST SCALED RESIDUAL FORCE      3.157E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.157E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.537E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.411E+11   TIME AVG. HEAT FLUX   2.002E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.181E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.358E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.683E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.879    
+ STEP TIME COMPLETED       0.879    ,  TOTAL TIME COMPLETED        0.879    
+
+
+  INCREMENT    97 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.2       TIME AVG. FORCE        67.6    
+ LARGEST SCALED RESIDUAL FORCE      3.158E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.158E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.535E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.401E+11   TIME AVG. HEAT FLUX   1.990E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.181E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.383E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.727E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.889    
+ STEP TIME COMPLETED       0.889    ,  TOTAL TIME COMPLETED        0.889    
+
+
+  INCREMENT    98 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.3       TIME AVG. FORCE        67.7    
+ LARGEST SCALED RESIDUAL FORCE      3.159E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.159E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.534E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.391E+11   TIME AVG. HEAT FLUX   1.979E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.183E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.407E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.771E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.899    
+ STEP TIME COMPLETED       0.899    ,  TOTAL TIME COMPLETED        0.899    
+
+
+  INCREMENT    99 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.3       TIME AVG. FORCE        67.8    
+ LARGEST SCALED RESIDUAL FORCE      3.161E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.161E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.533E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.382E+11   TIME AVG. HEAT FLUX   1.967E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.185E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.430E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.815E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.909    
+ STEP TIME COMPLETED       0.909    ,  TOTAL TIME COMPLETED        0.909    
+
+
+  INCREMENT   100 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.4       TIME AVG. FORCE        67.9    
+ LARGEST SCALED RESIDUAL FORCE      3.162E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.162E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.532E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.373E+11   TIME AVG. HEAT FLUX   1.956E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.189E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.451E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.860E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.919    
+ STEP TIME COMPLETED       0.919    ,  TOTAL TIME COMPLETED        0.919    
+
+
+  INCREMENT   101 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.4       TIME AVG. FORCE        68.0    
+ LARGEST SCALED RESIDUAL FORCE      3.164E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.164E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.531E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.364E+11   TIME AVG. HEAT FLUX   1.945E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.193E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.470E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.904E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.929    
+ STEP TIME COMPLETED       0.929    ,  TOTAL TIME COMPLETED        0.929    
+
+
+  INCREMENT   102 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.5       TIME AVG. FORCE        68.1    
+ LARGEST SCALED RESIDUAL FORCE      3.165E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.165E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.530E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.355E+11   TIME AVG. HEAT FLUX   1.934E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.198E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.488E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.949E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.939    
+ STEP TIME COMPLETED       0.939    ,  TOTAL TIME COMPLETED        0.939    
+
+
+  INCREMENT   103 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.5       TIME AVG. FORCE        68.2    
+ LARGEST SCALED RESIDUAL FORCE      3.167E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.167E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.530E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.346E+11   TIME AVG. HEAT FLUX   1.923E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.204E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.504E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   6.994E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.949    
+ STEP TIME COMPLETED       0.949    ,  TOTAL TIME COMPLETED        0.949    
+
+
+  INCREMENT   104 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.6       TIME AVG. FORCE        68.3    
+ LARGEST SCALED RESIDUAL FORCE      3.169E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.169E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.529E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.337E+11   TIME AVG. HEAT FLUX   1.913E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.212E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.519E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   7.039E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.959    
+ STEP TIME COMPLETED       0.959    ,  TOTAL TIME COMPLETED        0.959    
+
+
+  INCREMENT   105 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  1ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.6       TIME AVG. FORCE        68.5    
+ LARGEST SCALED RESIDUAL FORCE      3.171E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.171E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.529E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.329E+11   TIME AVG. HEAT FLUX   1.902E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.220E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.532E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   7.085E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.969    
+ STEP TIME COMPLETED       0.969    ,  TOTAL TIME COMPLETED        0.969    
+
+
+  INCREMENT   106 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.6       TIME AVG. FORCE        68.6    
+ LARGEST SCALED RESIDUAL FORCE      3.173E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.173E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.528E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.321E+11   TIME AVG. HEAT FLUX   1.892E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.229E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.543E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   7.130E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.979    
+ STEP TIME COMPLETED       0.979    ,  TOTAL TIME COMPLETED        0.979    
+
+
+  INCREMENT   107 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.7       TIME AVG. FORCE        68.7    
+ LARGEST SCALED RESIDUAL FORCE      3.175E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.175E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.528E-06   AT NODE          2   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.312E+11   TIME AVG. HEAT FLUX   1.882E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.239E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.553E+07   AT NODE          1   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   7.176E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.989    
+ STEP TIME COMPLETED       0.989    ,  TOTAL TIME COMPLETED        0.989    
+
+
+  INCREMENT   108 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.000E-02
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.7       TIME AVG. FORCE        68.8    
+ LARGEST SCALED RESIDUAL FORCE      3.177E-03   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      3.177E-03
+ LARGEST INCREMENT OF DISP.         1.000E-03   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.528E-06   AT NODE         18   DOF  1
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.304E+11   TIME AVG. HEAT FLUX   1.873E+12
+ LARGEST RESIDUAL HEAT FLUX        -2.249E+08   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         2.632E+11   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        4.561E+07   AT NODE         17   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   7.221E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.000E-02,  FRACTION OF STEP COMPLETED  0.999    
+ STEP TIME COMPLETED       0.999    ,  TOTAL TIME COMPLETED        0.999    
+
+
+  INCREMENT   109 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.500E-03
+ 
+	UNSYMMETRIC NEW DIRECT SPARSE SOLVER RUNNING ON
+ 	1 HOST x 1 MPI RANK PER HOST x 1 THREAD PER RANK
+        NUMBER OF EQUATIONS:  51
+        NUMBER OF RHS:        1
+        NUMBER OF FLOPS:      2.185e+04
+        SOLVER ELAPSED TIME:  0ms
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                       79.7       TIME AVG. FORCE        68.9    
+ LARGEST SCALED RESIDUAL FORCE      2.730E-04   AT NODE         10   DOF  1
+   INSTANCE: PART-1-1                                                                        
+  CORRESPONDING RESIDUAL FORCE      2.730E-04
+ LARGEST INCREMENT OF DISP.         1.500E-04   AT NODE          1   DOF  1
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO DISP.       -2.083E-07   AT NODE         17   DOF  2
+   INSTANCE: PART-1-1                                                                        
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ AVERAGE HEAT FLUX                  8.303E+11   TIME AVG. HEAT FLUX   1.863E+12
+ LARGEST RESIDUAL HEAT FLUX        -4.365E+07   AT NODE         11   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST INCREMENT OF TEMP.         3.949E+10   AT NODE          5   DOF 11
+   INSTANCE: PART-1-1                                                                        
+ LARGEST CORRECTION TO TEMP.        1.030E+06   AT NODE          9   DOF 11
+   INSTANCE: PART-1-1                                                                        
+          THE HEAT FLUX EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ MAXIMUM NON-PRESCRIBED INCREMENT IN TEMPERATURE IS   1.084E+09
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.500E-03,  FRACTION OF STEP COMPLETED   1.00    
+ STEP TIME COMPLETED        1.00    ,  TOTAL TIME COMPLETED         1.00    
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+     ANALYSIS SUMMARY:
+     TOTAL OF        109  INCREMENTS
+                       0  CUTBACKS IN AUTOMATIC INCREMENTATION
+                     121  ITERATIONS INCLUDING CONTACT ITERATIONS IF PRESENT
+                     121  PASSES THROUGH THE EQUATION SOLVER OF WHICH 
+                     121  INVOLVE MATRIX DECOMPOSITION, INCLUDING
+                       0  DECOMPOSITION(S) OF THE MASS MATRIX
+                       1  REORDERING OF EQUATIONS TO MINIMIZE WAVEFRONT
+                       0  ADDITIONAL RESIDUAL EVALUATIONS FOR LINE SEARCHES
+                       0  ADDITIONAL OPERATOR EVALUATIONS FOR LINE SEARCHES
+                       2  WARNING MESSAGES DURING USER INPUT PROCESSING
+                       0  WARNING MESSAGES DURING ANALYSIS
+                       0  ANALYSIS WARNINGS ARE NUMERICAL PROBLEM MESSAGES
+                       0  ANALYSIS WARNINGS ARE NEGATIVE EIGENVALUE MESSAGES
+                       0  ERROR MESSAGES
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =     0.66    
+       SYSTEM TIME (SEC)    =     0.18    
+       TOTAL CPU TIME (SEC) =     0.84    
+       WALLCLOCK TIME (SEC) =            1
+       MEMORY PEAK (GB)     =            2

@@ -1,0 +1,973 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2024 replay file
+# Internal Version: 2023_09_21-06.55.25 RELr426 190762
+# Run by bbist on Tue Jun 10 14:43:37 2025
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=298.714569091797, 
+    height=176.805557250977)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+import os
+os.chdir(
+    r"/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with simple_elem")
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=20.0)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=STANDALONE)
+s.rectangle(point1=(0.0, 0.0), point2=(1.0, 1.0))
+p = mdb.models['Model-1'].Part(name='Part-1', dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['Part-1']
+p.BaseSolidExtrude(sketch=s, depth=0.1)
+s.unsetPrimaryObject()
+p = mdb.models['Model-1'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].sketches['__profile__']
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+mdb.models['Model-1'].Material(name='Material-1')
+mdb.models['Model-1'].materials['Material-1'].Density(table=((1.0, ), ))
+mdb.models['Model-1'].materials['Material-1'].Elastic(table=((2600000.0, 0.3), 
+    ))
+mdb.models['Model-1'].HomogeneousSolidSection(name='Section-1', 
+    material='Material-1', thickness=None)
+p = mdb.models['Model-1'].parts['Part-1']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['Part-1']
+p.SectionAssignment(region=region, sectionName='Section-1', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+a = mdb.models['Model-1'].rootAssembly
+a.DatumCsysByDefault(CARTESIAN)
+p = mdb.models['Model-1'].parts['Part-1']
+a.Instance(name='Part-1-1', part=p, dependent=ON)
+a = mdb.models['Model-1'].rootAssembly
+p = mdb.models['Model-1'].parts['Part-1']
+a.Instance(name='Part-1-2', part=p, dependent=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.models['Model-1'].StaticStep(name='Step-1', previous='Initial')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON, adaptiveMeshConstraints=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.03237, 
+    farPlane=3.80415, width=1.54105, height=0.921339, cameraPosition=(-1.67923, 
+    2.0105, -1.1693), cameraUpVector=(-0.0949897, -0.96776, -0.233277), 
+    cameraTarget=(0.526882, 0.495864, 0.0272539))
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-2'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#1 ]', ), )
+region = a.Set(faces=faces1, name='Set-1')
+mdb.models['Model-1'].EncastreBC(name='BC-1', createStepName='Step-1', 
+    region=region, localCsys=None)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.14265, 
+    farPlane=3.71697, width=1.62467, height=0.971335, cameraPosition=(3.35495, 
+    0.017303, 0.498318), cameraUpVector=(-0.133196, 0.95075, -0.279882), 
+    cameraTarget=(0.504312, 0.5048, 0.0197773))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.01475, 
+    farPlane=3.85213, width=1.52769, height=0.913352, cameraPosition=(2.82621, 
+    2.25656, 0.380496), cameraUpVector=(-0.495404, 0.268665, -0.826071), 
+    cameraTarget=(0.50459, 0.503624, 0.0198392))
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Part-1-2'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#4 ]', ), )
+region = a.Set(faces=faces1, name='Set-2')
+mdb.models['Model-1'].DisplacementBC(name='BC-2', createStepName='Step-1', 
+    region=region, u1=0.1, u2=UNSET, u3=UNSET, ur1=UNSET, ur2=UNSET, ur3=UNSET, 
+    amplitude=UNSET, fixed=OFF, distributionType=UNIFORM, fieldName='', 
+    localCsys=None)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON, loads=OFF, 
+    bcs=OFF, predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['Part-1']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#1 ]', ), )
+p.setMeshControls(regions=pickedRegions, elemShape=TET, technique=FREE)
+elemType1 = mesh.ElemType(elemCode=C3D20R)
+elemType2 = mesh.ElemType(elemCode=C3D15)
+elemType3 = mesh.ElemType(elemCode=C3D10)
+p = mdb.models['Model-1'].parts['Part-1']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+pickedRegions =(cells, )
+p.setElementType(regions=pickedRegions, elemTypes=(elemType1, elemType2, 
+    elemType3))
+p = mdb.models['Model-1'].parts['Part-1']
+p.seedPart(size=0.8, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['Part-1']
+p.generateMesh()
+a1 = mdb.models['Model-1'].rootAssembly
+a1.regenerate()
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+mdb.Job(name='Flat_C3D10_elem', model='Model-1', description='', type=ANALYSIS, 
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90, 
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, numThreadsPerMpiProcess=1, 
+    multiprocessingMode=DEFAULT, numCpus=1, numGPUs=0)
+mdb.jobs['Flat_C3D10_elem'].submit(consistencyChecking=OFF, datacheckJob=True)
+#: The job input file "Flat_C3D10_elem.inp" has been submitted for analysis.
+#: Job Flat_C3D10_elem: Analysis Input File Processor completed successfully.
+#: Job Flat_C3D10_elem: Abaqus/Standard completed successfully.
+#: Job Flat_C3D10_elem completed successfully. 
+mdb.jobs['Flat_C3D10_elem'].submit(consistencyChecking=OFF)
+#: The job input file "Flat_C3D10_elem.inp" has been submitted for analysis.
+#: Job Flat_C3D10_elem: Analysis Input File Processor completed successfully.
+#: Job Flat_C3D10_elem: Abaqus/Standard completed successfully.
+#: Job Flat_C3D10_elem completed successfully. 
+o3 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with simple_elem/Flat_C3D10_elem.odb')
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     2
+#: Number of Meshes:             2
+#: Number of Element Sets:       6
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.08684, 
+    farPlane=3.69022, width=1.58234, height=0.946029, cameraPosition=(0.975098, 
+    -2.35691, 0.0822612), cameraUpVector=(-0.690724, 0.224144, -0.687503), 
+    cameraTarget=(0.539408, 0.541621, 0.0437376))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.01062, 
+    farPlane=3.76571, width=1.52455, height=0.911475, cameraPosition=(1.66071, 
+    3.01834, -0.824514), cameraUpVector=(-0.607085, -0.358175, -0.709337), 
+    cameraTarget=(0.529245, 0.461938, 0.0571795))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='RF', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='E', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
+    'Max. Principal'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='RF', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
+    'Mises'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
+    'Mises'), )
+session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(
+    elemLabels=ON, nodeLabels=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.21626, 
+    farPlane=3.57057, width=1.68047, height=1.0047, cameraPosition=(2.63305, 
+    0.386821, 2.05508), cameraUpVector=(-0.211925, 0.956248, -0.201689), 
+    cameraTarget=(0.523025, 0.512656, 0.0241273))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.03897, 
+    farPlane=3.76549, width=1.54604, height=0.924328, cameraPosition=(2.18123, 
+    2.22882, 1.7121), cameraUpVector=(-0.466758, 0.55092, -0.691826), 
+    cameraTarget=(0.528948, 0.488508, 0.0286236))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.0295, 
+    farPlane=3.7966, width=1.53886, height=0.920033, cameraPosition=(-0.979769, 
+    2.59506, -1.27066), cameraUpVector=(-0.142343, -0.867348, -0.476914), 
+    cameraTarget=(0.560666, 0.484833, 0.058553))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.58156, 
+    farPlane=3.24548, width=1.95746, height=1.1703, cameraPosition=(0.899245, 
+    0.444286, 2.94191), cameraUpVector=(-0.0419636, 0.948787, -0.313116), 
+    cameraTarget=(0.548859, 0.498347, 0.0320836))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.52159, 
+    farPlane=3.30544, width=1.95101, height=1.16645, viewOffsetX=-0.0591047, 
+    viewOffsetY=-0.114183)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='RF', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.15742, 
+    farPlane=3.6358, width=1.63586, height=0.978025, cameraPosition=(2.63331, 
+    0.999671, 1.99866), cameraUpVector=(-0.304085, 0.870418, -0.387176), 
+    cameraTarget=(0.523023, 0.506943, 0.0246532))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.523023, 
+    0.506943, 2.956), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='HFL', outputPosition=INTEGRATION_POINT, refinement=(
+    INVARIANT, 'Magnitude'), )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.40165, 
+    farPlane=3.39635, width=1.82105, height=1.08874, cameraPosition=(1.34398, 
+    0.652972, 2.83381), cameraUpVector=(0.958864, -0.0438493, -0.280459), 
+    cameraTarget=(0.515897, 0.505675, 0.0257139))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.515897, 
+    0.505675, 2.95707), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='LE', outputPosition=INTEGRATION_POINT, refinement=(
+    INVARIANT, 'Max. Principal'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='NT11', outputPosition=NODAL, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='RF', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='RFL11', outputPosition=NODAL, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
+    'Mises'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='TEMP', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.34493, 
+    farPlane=3.47227, width=3.75628, height=2.24575, viewOffsetX=0.691858, 
+    viewOffsetY=-0.587194)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.74806, 
+    farPlane=3.8815, width=2.80017, height=1.67413, cameraPosition=(2.70897, 
+    2.38143, 1.11844), cameraUpVector=(0.747907, 0.162869, -0.643513), 
+    cameraTarget=(1.47885, 0.519646, -0.78244), viewOffsetX=0.515755, 
+    viewOffsetY=-0.437731)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.46658, 
+    farPlane=3.59485, width=3.95116, height=2.36227, cameraPosition=(1.49929, 
+    0.850918, 2.9316), cameraUpVector=(0.351949, 0.931848, -0.0882719), 
+    cameraTarget=(0.893563, 0.808038, 0.0638429), viewOffsetX=0.727751, 
+    viewOffsetY=-0.617656)
+session.viewports['Viewport: 1'].view.setValues(width=3.82161, height=2.28482, 
+    cameraPosition=(1.42226, -0.224809, 2.89676), cameraUpVector=(0, 1, 0), 
+    cameraTarget=(1.42226, -0.224809, -0.13396), viewOffsetX=0, viewOffsetY=0)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='TEMP', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.521588, 
+    farPlane=2.92084, width=0.851873, height=0.509307, cameraPosition=(
+    -0.231485, 2.09168, 0.105374), cameraUpVector=(-0.495126, -0.334302, 
+    -0.80193), cameraTarget=(1.52913, -0.374502, 0.0464214))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.894694, 
+    farPlane=2.54774, width=0.936907, height=0.560146, viewOffsetX=-0.027268, 
+    viewOffsetY=0.0184978)
+session.viewports['Viewport: 1'].view.setValues(width=1.64971, height=0.986307, 
+    cameraPosition=(0.716897, 0.654241, 1.79589), cameraUpVector=(0, 1, 0), 
+    cameraTarget=(0.716897, 0.654241, 0.0746787), viewOffsetX=0, viewOffsetY=0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.25248, 
+    farPlane=2.2393, width=3.24905, height=1.9425, viewOffsetX=0.430361, 
+    viewOffsetY=-0.62906)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='TEMP', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='TEMP', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='TEMP', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='TEMP', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='TEMP', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.37816, 
+    farPlane=3.43915, width=3.51377, height=2.10077, viewOffsetX=0.620093, 
+    viewOffsetY=-0.546733)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV71', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV28', outputPosition=INTEGRATION_POINT, )
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV28', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV71', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.40952, 
+    farPlane=3.40792, width=3.28372, height=1.96323, viewOffsetX=0.467257, 
+    viewOffsetY=-0.48954)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.85389, 
+    farPlane=3.34951, width=2.52651, height=1.51051, cameraPosition=(0.472232, 
+    1.8701, 2.25968), cameraUpVector=(-0.0412473, 0.859882, -0.508823), 
+    cameraTarget=(0.503257, 0.378481, -0.263586), viewOffsetX=0.359509, 
+    viewOffsetY=-0.376654)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1.60866, 
+    farPlane=3.70553, width=2.1923, height=1.3107, cameraPosition=(2.23954, 
+    2.48539, 0.727867), cameraUpVector=(0.394299, 0.189569, -0.899217), 
+    cameraTarget=(0.680622, 0.284146, -0.419764), viewOffsetX=0.311953, 
+    viewOffsetY=-0.32683)
+session.viewports['Viewport: 1'].view.setValues(width=2.41857, height=1.44598, 
+    cameraPosition=(0.999787, 0.0618003, 2.93075), cameraUpVector=(0, 1, 0), 
+    cameraTarget=(0.999787, 0.0618003, 0.273657), viewOffsetX=0, viewOffsetY=0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.34749, 
+    farPlane=3.41425, width=3.53463, height=2.11324, viewOffsetX=0.180812, 
+    viewOffsetY=-0.183395)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='TEMP', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='TEMP', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='TEMP', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='TEMP', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='TEMP', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )
+#: Warning: The output database '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/CPFE_UMATHT_verification_with_with_simple_elem/Flat_C3D10_elem.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.526882, 
+    0.495864, 2.9586), cameraUpVector=(0, 1, 0))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV72', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV73', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV74', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV75', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='SDV76', outputPosition=INTEGRATION_POINT, )

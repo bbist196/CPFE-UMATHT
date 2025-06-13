@@ -1,0 +1,246 @@
+1
+
+   Abaqus 2024                                  Date 09-Jun-2025   Time 09:06:50
+   For use by UNIVERSITY OF WYOMING under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine dhcp-10-132-10-107 
+                          you are authorized to run
+                          Abaqus/Standard until 14-Aug-2025
+
+                          Your site id is: 200000000026686 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      https://www.3ds.com/products-services/simulia/services-support/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                       Abaqus 2024                       * 
+                *                                                         * 
+                *       BUILD ID: 2023_09_21-06.55.25 RELr426 190762      * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release Abaqus 2024 manuals                            * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a commercial fee.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+  *Element, type=CPE8RT
+  *Elset, elset=ASSEMBLY_PART-1-1_SET-1
+  *Elset, elset=ASSEMBLY_SET-1
+  *Elset, elset=ASSEMBLY_SET-102
+  *coupledtemperature-displacement, creep=NONE, deltmx=10000000000000
+  *material, name=MAT1
+  *density
+  *depvar
+  *usermaterial, constants=4, type=MECHANICAL
+  *usermaterial, constants=8, type=THERMAL
+  *initialconditions, type=TEMPERATURE
+  *solidsection, elset=ASSEMBLY_PART-1-1_SET-1, material=MAT1
+  *solidsection, elset=ASSEMBLY_PART-1-1_SET-1, material=MAT1
+  *initialconditions, type=TEMPERATURE
+  *boundary
+  *boundary, user
+  *boundary
+  *boundary
+  *boundary, user
+  *boundary
+  *output, field, frequency=100
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  *initialconditions, type=TEMPERATURE
+  *output, field, frequency=100
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  *initialconditions, type=TEMPERATURE
+  *output, field, frequency=100
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+
+ ***WARNING: UMATHT SHOULD NOT BE USED WITH REDUCED INTEGRATED OR MODIFIED 
+             ELEMENTS IF THE MECHANICAL AND THERMAL FIELD ARE COUPLED THROUGH 
+             PLASTIC DISSIPATION. IT IS RECOMMENDED THAT YOU USE FULLY 
+             INTEGRATED ELEMENTS INSTEAD.
+  
+                               E L E M E N T   Q U A L I T Y  C H E C K S        
+  
+  
+ ***NOTES: DISTORTED ISOPARAMETRIC ELEMENTS: ANGLE BETWEEN ISOPARAMETRIC LINES 
+           IS LESS THAN 45 DEGREES OR GREATER THAN 135 DEGREES.
+  
+           TETRAHEDRAL QUALITY MEASURE: VOLUME OF TETRAHEDRON DIVIDED BY THE 
+           VOLUME OF EQUILATERAL TETRAHEDRON WITH SAME CIRCUMSPHERE RADIUS; 
+           0 FOR DEGENERATE TETRAHEDRON AND 1 FOR EQUILATERIAL TETRAHEDRON. IT 
+           IS RECOMMENDED THAT THE TETRAHEDRAL QUALITY MEASURE BE GREATER THAN 
+           0.02, THE MIN INTERIOR (DIHEDRAL) ANGLE BE GREATER THAN 10 DEGREES, 
+           AND THE MAX INTERIOR (DIHEDRAL) ANGLE BE LESS THAN 160 DEGREES. 
+  
+           MODIFIED TETRAHEDRAL QUALITY MEASURE: ANGLES BETWEEN THE TWO LINE 
+           SEGMENTS ON EACH EDGE; THE EDGES OF MODIFIED TETRAHEDRAL SHOULD BE 
+           AS STRAIGHT AS POSSIBLE. IT IS RECOMMENDED THAT THE ANGLE BETWEEN 
+           THE TWO LINE SEGMENTS ON EACH EDGE IS BETWEEN 160 AND 180 DEGREES. 
+  
+           TRIANGULAR QUALITY MEASURE: AREA OF TRIANGLE DIVIDED BY THE AREA OF 
+           EQUILATERAL TRIANGLE WITH SAME CIRCUMCIRCLE RADIUS; 0 FOR DEGENERATE 
+           TRIANGLE AND 1 FOR EQUILATERAL TRIANGLE. IT IS RECOMMENDED THAT THE
+           TRIANGULAR QUALITY MEASURE BE GREATER THAN 0.01, THE MIN INTERIOR 
+           ANGLE BE GREATER THAN 10 DEGREES, AND THE MAX INTERIOR ANGLE BE LESS 
+           THAN 160 DEGREES. 
+  
+           NODAL ADJUSTMENTS ARISING FROM CONTACT INTERACTIONS AND/OR TIE 
+           CONSTRAINTS CAN CAUSE SEVERE ELEMENT DISTORTION. IT MAY BE NECESSARY 
+           TO REMESH IN ORDER TO REDUCE THE AMOUNT OF ADJUSTMENT. 
+
+ ***WARNING: 9 elements are distorted. Either the isoparametric angles are out 
+             of the suggested limits or the triangular or tetrahedral quality 
+             measure is bad. The elements have been identified in element set 
+             WarnElemDistorted.
+  
+ --------------------------------------------------------------------------------
+ Distorted isoparametric elements
+  
+      Element        Min/max angle   Adjusted nodes 
+ ------------------ ---------------- -------------- 
+       PART-1-1.299           43.444       NO       
+       PART-1-1.300          41.3231       NO       
+       PART-1-1.311          44.6962       NO       
+       PART-1-1.312          42.6706       NO       
+       PART-1-1.324          44.1978       NO       
+      PART-1-1.3465          41.9383       NO       
+      PART-1-1.4615          41.9383       NO       
+      PART-1-1.6070          38.9613       NO       
+      PART-1-1.6096          38.9445       NO       
+  
+  
+  *Step, name=Step-1, nlgeom=YES, inc=1000000, unsymm=YES, amplitude=RAMP
+  *output, field, frequency=100
+  *output, history, variable=PRESELECT
+  *Step, name=Step-1, nlgeom=YES, inc=1000000, unsymm=YES, amplitude=RAMP
+  *Step, name=Step-1, nlgeom=YES, inc=1000000, unsymm=YES, amplitude=RAMP
+  *coupledtemperature-displacement, creep=NONE, deltmx=10000000000000
+  *boundary
+  *boundary, user
+  *boundary
+  *output, field, frequency=100
+  *nodeoutput
+  *elementoutput, directions=YES
+  *output, history, variable=PRESELECT
+  *endstep
+  *Step, name=Step-1, nlgeom=YES, inc=1000000, unsymm=YES, amplitude=RAMP
+  *coupledtemperature-displacement, creep=NONE, deltmx=10000000000000
+  *boundary
+  *boundary, user
+  *boundary
+  *endstep
+
+ ***WARNING: Boundary conditions are specified on inactive dof greater than 6 
+             at 143 nodes. The nodes have been identified in node set 
+             WarnNodeBCInactiveDofAbove6.
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                  6134
+          NUMBER OF NODES IS                                    18721
+          NUMBER OF NODES DEFINED BY THE USER                   18721
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                43736
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =     0.34    
+       SYSTEM TIME (SEC)    =     3.00E-02
+       TOTAL CPU TIME (SEC) =     0.37    
+       WALLCLOCK TIME (SEC) =            1
+1
+
+   Abaqus 2024                                  Date 09-Jun-2025   Time 09:06:52
+   For use by UNIVERSITY OF WYOMING under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    1  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     C O U P L E D - T E M P E R A T U R E - D I S P L A C E M E N T   A N A L Y S I S
+
+
+                                                                                          
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                1.000E-04
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-25
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                1.000E-02
+
+          CREEP AND SWELLING EFFECTS ARE OMITTED IN THIS STEP
+
+     THE SIZE OF THE TIME INCREMENT IS CONTROLLED BY -
+          THE TEMPERATURE CHANGE PER INCREMENT NOT EXCEEDING           1.000E+13
+          THE RATE DEPENDENCY WILL BE CONSIDERED IN THIS STEP
+
+          CREEP AND SWELLING EFFECTS WILL BE IGNORED.
+
+          LARGE DISPLACEMENT THEORY WILL BE USED
+
+          UNSYMMETRIC MATRIX STORAGE AND SOLUTION WILL BE USED

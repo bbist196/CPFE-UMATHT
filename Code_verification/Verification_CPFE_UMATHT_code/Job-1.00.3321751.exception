@@ -1,0 +1,69 @@
+<Description>
+      ABAQUS/standard rank 00 pid 3321751 received signal 6 (Aborted)
+
+</Description>
+
+<Step> 1 </Step>
+
+<Procedure> COUPLED TEMPERATURE DISPLACEMENT </Procedure>
+
+
+<Context>
+   ELEMENT LOOP
+</Context>
+
+<Phase>
+   Exec | ProcDriver | ZeroInc | Elgen | Elgene | Elgene_regular
+</Phase>
+
+
+<Memory>
+   <Current>            2 GB </Current>
+   <Resident>           0 GB </Resident>
+   <Physical>          16 GB </Physical>
+   <Limit>             12 GB </Limit>
+   <Accessible>        16 GB </Accessible>
+   <Available>          4 GB </Available>
+   <Allocator>            DL </Allocator>
+   <HugePages>        always </HugePages>
+</Memory>
+
+<Swap>
+       <Size>           7 GB </Size>
+       <Used>           0 GB </Used>
+       <Free>           7 GB </Free>
+</Swap>
+
+<Directories>
+  <current> /tmp/bbist_Job-1_3321721       </current> <free>      6 GB </free>   <used>     63 GB </used> 
+    <indir> /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/Verification_CPFE_UMATHT_code </indir>   <free>    224 GB </free>  
+   <outdir> /home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/Verification_CPFE_UMATHT_code </outdir>  <free>    224 GB </free> 
+   <tmpdir> /tmp/bbist_Job-1_3321721       </tmpdir>  <free>      6 GB </free> 
+</Directories>
+
+<Installation>
+     <Version> 2024 6.24-1 </Version>
+       <Build> 2023_09_21-06.55.25 RELr426 190762 </Build>
+  <Executable> /usr/SIMULIA/EstProducts/2024/linux_a64/code/bin/standard </Executable>
+</Installation>
+
+<Callstack>
+   1) libc.so.6                  0x0008b52c ! __pthread_kill_implementation ??:?
+   2) libc.so.6                  0x0003e686 ! raise            :?
+   3) libifcoremt.so.5           0x000401c1 ! for__issue_diagnostic ??:?
+   4) libifcoremt.so.5           0x0003f331 ! for__io_return   ??:?
+   5) libifcoremt.so.5           0x0007af8e ! for_read_int_lis_xmit ??:?
+   6) libifcoremt.so.5           0x00079c8a ! for_read_int_lis ??:?
+   7) libstandardU.so            0x0000d615 ! umat             ??:?
+   8) libABQSMAStaCore.so        0x0230e944 ! matu2_           ??:?
+   9) libABQSMAStaCore.so        0x0230bc02 ! matu1_           ??:?
+  10) libABQSMAStaCore.so        0x033bd048 ! std_matgen_general_ ??:?
+  11) libABQSMAStaCore.so        0x02e89e54 ! std_elssol_general_ ??:?
+  12) libABQSMAStaCore.so        0x02e86a8e ! std_elssol       ??:?
+  13) libABQSMAStaCore.so        0x018d1478 ! elssol           ??:?
+  14) libABQSMAStaCore.so        0x02dfc389 ! std_elgene_solid_ ??:?
+  15) libABQSMAStaCore.so        0x016f7e54 ! elgene_          ??:?
+  16) libABQSMAStaCore.so        0x02d7f579 ! std_elgen_general_ ??:?
+  17) libABQSMAStaCore.so        0x02d78537 ! std_elgen_driver ??:?
+</Callstack>
+

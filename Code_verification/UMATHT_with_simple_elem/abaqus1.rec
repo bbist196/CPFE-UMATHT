@@ -1,0 +1,130 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].PartFromInputFile(inputFileName=
+    '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/Verification_CPFE_UMATHT_code/Flat.inp')
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=20.0)
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(-1.0, 1.0), 
+    point2=(1.0, -1.0))
+mdb.models['Model-1'].Part(dimensionality=TWO_D_PLANAR, name='Part-2', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-2'].BaseShell(sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].Material(name='Material-1')
+mdb.models['Model-1'].materials['Material-1'].Density(table=((1.0, ), ))
+mdb.models['Model-1'].materials['Material-1'].Elastic(table=((2600000.0, 0.3), 
+    ))
+mdb.models['Model-1'].HomogeneousSolidSection(material='Material-1', name=
+    'Section-1', thickness=None)
+mdb.models['Model-1'].parts['Part-2'].Set(faces=
+    mdb.models['Model-1'].parts['Part-2'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ), name='Set-1')
+mdb.models['Model-1'].parts['Part-2'].SectionAssignment(offset=0.0, 
+    offsetField='', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Part-2'].sets['Set-1'], sectionName=
+    'Section-1', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Part-2-1', 
+    part=mdb.models['Model-1'].parts['Part-2'])
+mdb.models['Model-1'].StaticStep(name='Step-1', previous='Initial')
+mdb.models['Model-1'].rootAssembly.Set(edges=
+    mdb.models['Model-1'].rootAssembly.instances['Part-2-1'].edges.getSequenceFromMask(
+    ('[#2 ]', ), ), name='Set-1')
+mdb.models['Model-1'].EncastreBC(createStepName='Step-1', localCsys=None, name=
+    'BC-1', region=mdb.models['Model-1'].rootAssembly.sets['Set-1'])
+mdb.models['Model-1'].rootAssembly.Surface(name='Surf-1', side1Edges=
+    mdb.models['Model-1'].rootAssembly.instances['Part-2-1'].edges.getSequenceFromMask(
+    ('[#8 ]', ), ))
+mdb.models['Model-1'].Pressure(amplitude=UNSET, createStepName='Step-1', 
+    distributionType=UNIFORM, field='', magnitude=-10.0, name='Load-1', region=
+    mdb.models['Model-1'].rootAssembly.surfaces['Surf-1'])
+mdb.models['Model-1'].parts['Part-2'].setMeshControls(elemShape=QUAD, regions=
+    mdb.models['Model-1'].parts['Part-2'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ))
+mdb.models['Model-1'].parts['Part-2'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=0.5)
+mdb.models['Model-1'].parts['Part-2'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Model-1', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='@D_test_elem', nodalOutputPrecision=
+    SINGLE, numCpus=1, numGPUs=0, numThreadsPerMpiProcess=1, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
+mdb.jobs['@D_test_elem'].submit(consistencyChecking=OFF, datacheckJob=True)
+mdb.jobs['@D_test_elem']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'jobName': '@D_test_elem', 'clientHost': 'dhcp-10-132-10-107', 
+    'handle': 0})
+mdb.jobs['@D_test_elem']._Message(ODB_FILE, {
+    'file': '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/Verification_CPFE_UMATHT_code/@D_test_elem.odb', 
+    'phase': BATCHPRE_PHASE, 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': BATCHPRE_PHASE, 
+    'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'jobName': '@D_test_elem', 'clientHost': 'dhcp-10-132-10-107', 
+    'handle': 0})
+mdb.jobs['@D_test_elem']._Message(STEP, {'stepId': 1, 'phase': STANDARD_PHASE, 
+    'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(ODB_FRAME, {'step': 0, 'frame': 0, 
+    'phase': STANDARD_PHASE, 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(MEMORY_ESTIMATE, {'memory': 7.0, 
+    'phase': STANDARD_PHASE, 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(PHYSICAL_MEMORY, {'physical_memory': 16384.0, 
+    'phase': STANDARD_PHASE, 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(MINIMUM_MEMORY, {'minimum_memory': 7.0, 
+    'phase': STANDARD_PHASE, 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': STANDARD_PHASE, 
+    'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(JOB_COMPLETED, {
+    'time': 'Tue Jun 10 12:25:04 2025', 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem'].submit(consistencyChecking=OFF)
+mdb.jobs['@D_test_elem']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'jobName': '@D_test_elem', 'clientHost': 'dhcp-10-132-10-107', 
+    'handle': 0})
+mdb.jobs['@D_test_elem']._Message(ODB_FILE, {
+    'file': '/home/bbist/Research/HE_RESEARCH/CPFE+UMATHT/Verification_CPFE_UMATHT_code/@D_test_elem.odb', 
+    'phase': BATCHPRE_PHASE, 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': BATCHPRE_PHASE, 
+    'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'jobName': '@D_test_elem', 'clientHost': 'dhcp-10-132-10-107', 
+    'handle': 0})
+mdb.jobs['@D_test_elem']._Message(STEP, {'stepId': 1, 'phase': STANDARD_PHASE, 
+    'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(ODB_FRAME, {'step': 0, 'frame': 0, 
+    'phase': STANDARD_PHASE, 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(MEMORY_ESTIMATE, {'memory': 24.0, 
+    'phase': STANDARD_PHASE, 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(PHYSICAL_MEMORY, {'physical_memory': 16384.0, 
+    'phase': STANDARD_PHASE, 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(MINIMUM_MEMORY, {'minimum_memory': 17.0, 
+    'phase': STANDARD_PHASE, 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(ODB_FRAME, {'step': 0, 'frame': 1, 
+    'phase': STANDARD_PHASE, 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(STATUS, {'step': 1, 'increment': 1, 
+    'attempts': 1, 'severe': 0, 'equilibrium': 1, 'iterations': 1, 
+    'totalTime': 1.0, 'stepTime': 1.0, 'timeIncrement': 1.0, 
+    'phase': STANDARD_PHASE, 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(END_STEP, {'stepId': 1, 
+    'phase': STANDARD_PHASE, 'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(COMPLETED, {
+    'message': 'Analysis phase complete', 'phase': STANDARD_PHASE, 
+    'jobName': '@D_test_elem'})
+mdb.jobs['@D_test_elem']._Message(JOB_COMPLETED, {
+    'time': 'Tue Jun 10 12:25:24 2025', 'jobName': '@D_test_elem'})

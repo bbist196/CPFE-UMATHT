@@ -85,8 +85,7 @@ Set-102, 2.659e11
 *Step, name=Step-1, nlgeom=YES, inc=1000000, unsymm=YES, amplitude=RAMP
 *Coupled Temperature-displacement, creep=none, deltmx=1e13
 0.0001, 1., 1e-25, 0.01
-**Controls, parameters=TIME INCREMENTATION
-**2,10,1E-10,0.01
+
 ** 
 ** BOUNDARY CONDITIONS
 ** 

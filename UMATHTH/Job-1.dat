@@ -1,6 +1,6 @@
 1
 
-   Abaqus 2024                                  Date 29-May-2025   Time 14:26:27
+   Abaqus 2024                                  Date 09-Jun-2025   Time 09:14:48
    For use by UNIVERSITY OF WYOMING under license from Dassault Systemes or its subsidiary.
 
 
@@ -209,13 +209,13 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =     0.34    
+       USER TIME (SEC)      =     0.35    
        SYSTEM TIME (SEC)    =     4.00E-02
-       TOTAL CPU TIME (SEC) =     0.38    
+       TOTAL CPU TIME (SEC) =     0.39    
        WALLCLOCK TIME (SEC) =            1
 1
 
-   Abaqus 2024                                  Date 29-May-2025   Time 14:26:28
+   Abaqus 2024                                  Date 09-Jun-2025   Time 09:14:49
    For use by UNIVERSITY OF WYOMING under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    1  INCREMENT    1
@@ -282,3 +282,19 @@
           BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
           ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
       (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH      3 WARNING MESSAGES ON THE DAT FILE
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =     3.69E+02
+       SYSTEM TIME (SEC)    =     1.25E+02
+       TOTAL CPU TIME (SEC) =     4.94E+02
+       WALLCLOCK TIME (SEC) =          562

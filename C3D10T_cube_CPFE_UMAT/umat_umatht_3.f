@@ -79,9 +79,6 @@ subroutine umatht(u,dudt,dudg,flux,dfdt,dfdg,statev,temp,dtemp, &
       sig(2)=grad(noel,2)
       sig(3)=grad(noel,3)
       
-      sig(1)=grad(noel,1)
-      sig(2)=grad(noel,2)
-      sig(3)=grad(noel,3)
       ntraps=nprops/2-1
 !      print *, "sig", sig(:)
       do k1=1,ntraps
